@@ -1,0 +1,51 @@
+trigger:
+- trunk
+- dev
+variables:
+- name: versionStamp
+  value: '[Build: $(Build.BuildNumber). Commit: $(Build.SourceVersion)]'
+pool:
+  vmImage: "ubuntu-latest"
+steps:
+- task: Npm@1
+  inputs:
+    command: 'install'
+- task: replacetokens@3
+  inputs:
+    rootDirectory: 'sass'
+    targetFiles: 'style.scss'
+    encoding: 'auto'
+    writeBOM: true
+    actionOnMissing: 'warn'
+    keepToken: false
+    tokenPrefix: '#{'
+    tokenSuffix: '}#'
+    useLegacyPattern: false
+    enableTelemetry: true
+- task: gulp@0
+  inputs:
+    gulpFile: 'gulpfile.js'
+    targets: 'dev'
+    gulpjs: 'node_modules/gulp/bin/gulp.js'
+    enableCodeCoverage: false
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+- task: gulp@0
+  inputs:
+    gulpFile: 'gulpfile.js'
+    targets:
+    gulpjs: 'node_modules/gulp/bin/gulp.js'
+    enableCodeCoverage: false
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/trunk'))
+- task: DeleteFiles@1
+  inputs:
+    SourceFolder:
+    Contents: |
+      node_modules
+      package*
+      gulpfile*
+      readme*
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: './'
+    ArtifactName: 'mayflower-g4'
+    publishLocation: 'Container'

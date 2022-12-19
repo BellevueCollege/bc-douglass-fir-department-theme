@@ -1,0 +1,1547 @@
+/*!
+Theme Name: BC "Douglas Fir" Theme
+Theme URI: https://github.com/BellevueCollege/bc-douglas-fir-department-theme
+Description: The Bellevue College Department Site theme.
+Author: Bellevue College Integration
+Author URI: https://www.bellevuecollege.edu/its/
+Version: 0.0.0-dev1--#{versionStamp}#
+GitHub Theme URI: bellevuecollege/bc-douglas-fir-department-theme
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blue, white, two-columns, three-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, post-formats, theme-options, accessibility-ready
+Text Domain: bc-douglas-fir
+*/
+
+/* Variable Setup */
+
+/* Defaults (should match Globals) */
+
+/* Colors */
+$brand-primary:         #003d79; // BC Brand Primary Blue
+$brand-success:         #317131; // Darkened to meet a11y AA requirements
+$brand-info:            #afd7ff; // Lightened BC Brand Blue to meet a11y requirements
+$brand-warning:         #f2c01e; // BC Brand Yellow
+$brand-danger:          #c4122f; // BC Brand Red
+
+$btn-info-color:        #162f57;
+$btn-warning-color:     #000;
+$btn-warning-border:    #e36f1e; //BC Brand Orange
+
+$bg-color: #f5f5f5;
+
+/* Typography */
+$font-body: helvetica, arial, sans-serif;
+$font-heading: georgia, "Times New Roman", times, serif;
+$font-monospace: monaco, menlo, consolas, "Courier New", monospace;
+$std-line-height: 1.66666667em;
+$std-margin: 1em;
+$sm-margin: calc($std-margin/3);
+
+// Bootstrap Breakpoints
+$breakpoint-bs-sm: 576px;
+$breakpoint-bs-md: 768px;
+$breakpoint-bs-lg: 992px;
+
+/* ###################################### */
+
+/* ----- WordPress Core             ----- */
+
+/* ###################################### */
+
+/* Make sure videos and embeds fit their containers. */
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+
+.card .wp-block-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wp-video {
+	max-width: 100%;
+	float: left;
+}
+
+.wp-audio-shortcode {
+	max-width: 100%;
+}
+
+.alignnone {
+	margin: 20px 20px 5px 0;
+}
+
+.alignnone,
+.alignright,
+.alignleft,
+.aligncenter {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+
+	.alignright {
+		float: right;
+		margin: 0.5em 0 1em 1em;
+	}
+
+	.alignleft {
+		float: left;
+		margin: 0.5em 1em 1em 0;
+	}
+
+	.aligncenter {
+		display: block;
+		margin: 0.5em auto 0.5em auto;
+	}
+}
+
+
+.wp-post-image.alignright,
+.wp-post-image.alignleft,
+.wp-caption.alignright,
+.wp-caption.alignleft,
+.wp-post-image.aligncenter,
+.wp-caption.aligncenter,
+.wp-post-image.alignnone,
+.wp-caption.alignnone {
+	max-width: 100%;
+}
+
+.wp-caption.alignnone {
+	margin: 20px 20px 5px 0;
+}
+
+// Image widget
+.wp-widget img.image,
+.wp-widget .wp-caption.alignnone {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	display: block;
+	box-shadow: 0 2px 2px #dcdbdb;
+
+	img.image {
+		box-shadow: none;
+	}
+
+	.wp-caption-text {
+		padding: 0.5em;
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	.wp-widget img.image {
+		margin: 0;
+		box-shadow: 0 2px 2px #dcdbdb;
+	}
+}
+
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+	font-size: 0.85em;
+	line-height: 16px;
+	margin: 0.25em 0;
+	padding: 0 0.25em;
+}
+
+.wp-caption-dd {
+	margin: 0;
+	padding: 0;
+}
+
+.content-row {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.row-padding {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/* Style WP's property the same as .sr-only in Bootstrap */
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+/* ####################################### */
+
+/* ----- Image Gallery Styles ----- */
+
+/* Fix Gallery Block on Edge */
+.blocks-gallery-grid,
+.wp-block-gallery {
+	max-width: 100%;
+}
+
+
+
+/* ###################################### */
+
+/* Mixins to automate column options */
+@mixin gallery-item( $columns, $spacing, $min-size: 100px) {
+
+	// Support for browsers without proper CSS Grid support
+	.gallery.gallery-columns-#{$columns} .gallery-item {
+		flex: 0 0 auto;
+		width: calc(100%/$columns);
+		padding: calc($spacing/2);
+		min-width: $min-size;
+	}
+}
+
+/*Universal Styles for Gallery */
+
+.gallery {
+	//Flexbox
+	display: flex;
+	flex-flow: row wrap;
+}
+
+@include gallery-item( 0, 1em, 200px );
+@include gallery-item( 1, 1em, 200px );
+@include gallery-item( 2, 1em, 200px );
+@include gallery-item( 3, 1em, 200px );
+@include gallery-item( 4, 1em, 150px );
+@include gallery-item( 5, 1em, 100px );
+@include gallery-item( 6, 1em, 100px );
+@include gallery-item( 7, 1em, 80px );
+@include gallery-item( 8, 1em, 75px );
+@include gallery-item( 9, 1em, 50px );
+
+
+// Sidebar Gallery
+.sidebar .gallery .gallery-item {
+	min-width: auto;
+	padding: 0.125em;
+}
+
+.gallery-caption {
+	text-align: center;
+}
+
+.gallery-item img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+// Add wrap support for old browsers
+.no-flexwrap .gallery-item {
+	display: inline-block;
+}
+
+/* ####################################### */
+
+/* ----- Post template overrides ----- */
+
+/* ###################################### */
+.entry-date {
+	font-size: 0.85em;
+	margin-top: 0;
+}
+
+
+/* ####################################### */
+
+/* ----- Page template overrides ----- */
+
+/* ###################################### */
+
+.nav-page h2 {
+	margin-top: 0;
+}
+
+.nav-page-list h2 {
+	margin-top: 2rem;
+}
+
+.nav-page img {
+	margin-top: 0;
+	display: inline;
+}
+
+div.nav-page {
+	margin-bottom: 1em;
+}
+
+li.media {
+	margin-left: 0;
+}
+
+$fluid-grid-min-column-width: 200px;
+
+/**
+ * Fluid Grid Page Template
+ **/
+.child-pages.fluid-grid {
+
+
+	div.grid-sizer,
+	& > article {
+		width: calc(50% - 10px);
+		min-width: $fluid-grid-min-column-width;
+	}
+}
+
+@media screen and (max-width: ($fluid-grid-min-column-width+30px)*2) {
+
+	.child-pages.fluid-grid {
+
+		div.grid-sizer,
+		& > article {
+			width: 100%;
+
+		}
+	}
+}
+
+
+@media screen and (min-width: $breakpoint-bs-sm) {
+
+	.child-pages.fluid-grid {
+
+		div.grid-sizer,
+		& > article {
+			width: calc(33.3333% - 10px);
+
+		}
+	}
+}
+
+/* ####################################### */
+
+/* ----- Staff CPT styles - to move  ----- */
+
+/* ###################################### */
+.staff-details {
+	margin-bottom: 2em;
+}
+
+/* Note- these are replicated in block for both editor and front-end styles! */
+
+ul.staff-details-list {
+	padding: 0;
+	margin: 1em 0;
+
+	li {
+		list-style: none;
+	}
+
+}
+
+/* ####################################### */
+
+/* ----- Header -------------------------- */
+
+/* ####################################### */
+
+.header-image a {
+	display: inline-block;
+}
+
+.header-image a:focus {
+	outline: none; // Remove Boostrap outline, as we are adding our own in Globals
+}
+
+img.header-image {
+	max-width: 100%;
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+	max-height: 100px;
+}
+
+ul.header-social-links li {
+	display: inline;
+}
+
+/* ####################################### */
+
+/* ----- Post & Page Content areas ------- */
+
+/* ####################################### */
+
+.single-featured-thumb {
+	margin: 1.333em 1.3333em 0.3333em 0;
+}
+
+/* Center images on small screens. Not mobile first... */
+@media screen and (max-width: 769px) {
+
+	.single-featured-thumb {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+
+		img.img-fluid {
+			display: inline;
+		}
+	}
+}
+
+/* ####################################### */
+
+/* ----- Gravity Forms Display Over-Rides ------- */
+
+/* ####################################### */
+.gform_wrapper.gravity-theme {
+
+	input,
+	textarea,
+	select {
+		border: 1px solid #ced4da;
+		border-radius: 0.25rem;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	}
+
+	input:focus,
+	textarea:focus,
+	select:focus {
+		border-color: #66afe9;
+		outline: 0;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+	}
+
+	label.gfield_label,
+	legend.gfield_label,
+	.gsection_title {
+		margin-bottom: 0;
+	}
+
+
+	.ginput_container {
+		margin-top: 0.25em !important;
+	}
+
+	.gfield {
+		border-left: 5px solid #eee;
+		border-radius: 0.25em;
+		padding-left: 0.5em;
+	}
+
+	.gfield.gsection {
+		border-left: none;
+		padding-left: 0;
+		border-radius: 0;
+	}
+
+	.gsection_title {
+		font-size: 1.6em !important;
+	}
+
+	h3.gf_progressbar_title {
+		font-family: $font-body;
+	}
+
+}
+.gform_wrapper.gform_legacy_markup_wrapper {
+
+	.gform_page_footer {
+		display: flex;
+	}
+
+	input,
+	textarea,
+	select {
+		display: block;
+		width: 100%;
+		height: calc(1.5em + 0.75rem + 2px);
+		padding: 0.375rem 0.75rem;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.5;
+
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		border-radius: 0.25rem;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	}
+
+	select {
+		background: #fff;
+	}
+
+	input:focus,
+	textarea:focus,
+	select:focus {
+		border-color: #66afe9;
+		outline: 0;
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+	}
+
+	input[type=radio],
+	input[type=checkbox] {
+		position: relative;
+		top: -5px;
+		height: 1em;
+		width: 2em;
+	}
+
+	legend {
+		font-size: inherit;
+		font-weight: 700;
+		margin-bottom: 0;
+		border: none;
+	}
+
+	label.gfield_label,
+	legend.gfield_label,
+	.gsection_title {
+		font-weight: normal !important;
+		margin-bottom: 0;
+	}
+
+	ul li.gfield {
+		//margin-top: 2em !important;
+	}
+
+	.ginput_container {
+		margin-top: 0.25em !important;
+	}
+
+	.gfield {
+		border-left: 5px solid #eee;
+		border-radius: 0.25em;
+		padding-left: 0.5em;
+	}
+
+	.gfield.gsection {
+		border-left: none;
+		padding-left: 0;
+		border-radius: 0;
+	}
+
+	.gsection_title {
+		font-size: 1.6em !important;
+	}
+
+	h3.gf_progressbar_title {
+		font-family: $font-body;
+	}
+}
+
+// Date Picker text color
+.ui-datepicker-title select {
+	color: #000;
+	font-weight: normal;
+}
+
+/* ####################################### */
+
+/* ----- Navigation/widget areas styles ----- */
+
+/* ###################################### */
+
+// Target Mobile Breakpoints Only
+@media screen and (max-width: $breakpoint-bs-md - 1) {
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+	.sidebar {
+		display: none;
+		margin: 0 0 1em 0;
+		padding: 1em !important;
+		background: $brand-primary;
+
+		.wp-widget {
+			background: #fff;
+		}
+
+	}
+	#carousel-featured-full {
+		margin-top: 0;
+	}
+	#main {
+		padding-top: 1rem;
+	}
+	.carousel-col {
+		margin-top: -1rem;
+	}
+	header.action-menu ~ #main {
+		padding-top: 0;
+
+		.carousel-col {
+			//order: 2;
+		}
+
+		.sidebar {
+			//order: 1;
+			display: block;
+
+		}
+	}
+
+	header.action-menu ~ #site-header {
+		background: $brand-primary;
+		margin-bottom: 0;
+		a {
+			color: #fff;
+			font-size: 1.5rem;
+			text-decoration: underline;
+		}
+
+	}
+	header.action-menu ~ .sitewide-notice {
+		display: none;
+	}
+
+}
+
+.sidebar {
+
+	&.sidebarleft {
+		padding-left: 0;
+	}
+
+	&.sidebarright {
+		padding-right: 0;
+	}
+
+	.wp-widget {
+		margin-bottom: 1em;
+
+
+		ul {
+			margin-top: 0.5em;
+		}
+
+		li:last-child {
+			padding-bottom: 0.5em;
+		}
+	}
+
+	/* Menu Widget */
+	.wp-widget.widget_nav_menu {
+		box-shadow: 0 2px 2px darken($bg-color, 10%);
+	}
+
+	.widget-title {
+		font-size: 1rem;
+		line-height: 1.75rem;
+		background-image: linear-gradient(lighten(#004785, 5%), #004785);
+		font-family: $font-body;
+		color: white;
+		margin: 0;
+
+		a,
+		a:hover,
+		a:visited,
+		a:active,
+		a:focus {
+			color: #fff;
+		}
+	}
+
+	ul.menu,
+	ul.sub-menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+	}
+
+	li.menu-item:last-child {
+		padding: 0;
+	}
+
+	li.menu-item {
+		margin: 0;
+		padding: 0;
+		display: block;
+
+		a {
+			border-bottom: 1px solid darken($bg-color, 5%);
+			padding: 0.125em 0 0.125em 1rem;
+			width: 100%;
+			display: block;
+		}
+
+		a:hover,
+		a:focus,
+		a:active {
+			background: darken($bg-color, 5%);
+			box-shadow: inset 0 2px 2px darken($bg-color, 25%);
+		}
+	}
+
+	li.menu-item.current_page_item > a,
+	li.menu-item.current-menu-item > a {
+		color: #000;
+		text-decoration: none;
+		background: $bg-color;
+	}
+
+	ul.sub-menu li.menu-item {
+
+		a {
+			padding-left: 1.5em;
+		}
+
+		a::before {
+			content: "\2012"; //small endash
+			display: inline-block;
+			margin-right: 0.25em;
+		}
+
+		a.menu-expand-button::before {
+			content: none;
+			margin: 0;
+		}
+	}
+
+	ul.sub-menu li.menu-item li.menu-item a {
+		padding-left: 5em;
+	}
+
+	/* Page Widgets
+	 * Recent, Archives, Categories, etc
+	 */
+	.wp-widget.widget_recent_entries,
+	.wp-widget.widget_archive,
+	.wp-widget.widget_categories,
+	.wp-widget.widget_rss,
+	.wp-widget.widget_tag_cloud,
+	.wp-widget.widget_bc_contact_widget,
+	.wp-widget.widget_bc_location_widget,
+	.wp-widget.widget_listcategorypostswidget,
+	.wp-widget.gform_widget {
+		box-shadow: 0 2px 2px darken($bg-color, 10%);
+	}
+
+	.wp-widget.widget_archive select,
+	.wp-widget.widget_categories select {
+		margin-left: 1.5em;
+		width: calc(100% - 2.5em);
+		//emulate bootstrap 3, with a sidebar twist
+		display: inline-block;
+		max-width: 100%;
+		height: 34px;
+		padding: 6px 12px;
+		font-size: 14px;
+		line-height: 1.42857143;
+		color: #555;
+		background-color: #fff;
+		background-image: none;
+		border: 0;
+		border-radius: 0;
+	}
+
+	.rss-date {
+		font-size: 0.8em;
+		line-height: 1.5em;
+		display: block;
+	}
+
+	.widget_rss cite {
+		text-align: right;
+		display: block;
+	}
+
+	.widget_rss cite::before {
+		content: "\2014"; //emdash
+	}
+
+	div.tagcloud {
+		margin-left: 2em;
+		padding-top: 1em;
+		margin-right: 0.5em;
+		padding-bottom: 1em;
+	}
+
+	.textwidget {
+		margin-top: 0.5em;
+		margin-left: 1em;
+		margin-right: 0.5em;
+
+		li {
+			margin-left: 1em;
+		}
+
+		img.aligncenter,
+		img.alignright,
+		img.alignleft,
+		img.alignnone {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.sidebar {
+
+	ul.sub-menu {
+		display: none;
+	}
+
+	.active > ul.sub-menu,
+	.active > ul.sub-menu {
+		display: block;
+	}
+
+	.menu-item-has-children > a {
+		padding-right: 1.4em;
+	}
+
+	.menu-item a.menu-expand-button,
+	.menu-item a.menu-expand-button:focus,
+	.menu-item a.menu-expand-button:active,
+	.menu-item a.menu-expand-button:hover {
+		display: block;
+		float: right;
+		width: auto;
+		padding: 0.2em 0.5em;
+		border: 0 none transparent;
+		background: transparent;
+		box-shadow: none;
+		color: #666;
+		max-height: 1.5em;
+	}
+
+}
+
+/* Support for Gutenberg */
+
+.has-white-color {
+	color: #fff;
+}
+
+.has-black-color {
+	color: #000;
+}
+
+.has-bc-blue-color {
+	color: #003d79;
+}
+
+.has-bc-silver-color {
+	color: #a7a9ac;
+}
+
+.has-bc-red-color {
+	color: #c4122f;
+}
+
+.has-bc-green-color {
+	color: #aab720;
+}
+
+.has-bc-dark-blue-color {
+	color: #162f57;
+}
+
+.has-bc-orange-color {
+	color: #e36f1e;
+}
+
+.has-bc-gold-color {
+	color: #f2c01e;
+}
+
+.has-white-background-color {
+	background: #fff;
+}
+
+.has-black-background-color {
+	background: #000;
+}
+
+.has-bc-blue-background-color {
+	background: #003d79;
+}
+
+.has-bc-silver-background-color {
+	background: #a7a9ac;
+}
+
+.has-bc-red-background-color {
+	background: #c4122f;
+}
+
+.has-bc-green-background-color {
+	background: #aab720;
+}
+
+.has-bc-dark-blue-background-color {
+	background: #162f57;
+}
+
+.has-bc-orange-background-color {
+	background: #e36f1e;
+}
+
+.has-bc-gold-background-color {
+	background: #f2c01e;
+}
+
+
+
+/* Styles for Simple Twitter Tweets plugin
+ * https://wordpress.org/plugins/simple-twitter-tweets/
+ */
+.sidebar .tweets {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		margin: 0 0 0.5em 0;
+		padding: 0.25em 1em;
+		background: $bg-color;
+		border-radius: 5px;
+		display: block;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+		border: #ddd 1px solid;
+
+		.stt-em {
+			display: block;
+			text-align: right;
+			font-size: 0.8em;
+		}
+
+		.stt-em a {
+			color: #666;
+			text-decoration: underline;
+			color: #000;
+		}
+	}
+
+	li:first-child {
+		margin-top: 0.5em;
+	}
+
+	li.avatar img {
+		margin: 0.5em 0.5em 0.1em 0;
+	}
+
+	.intent-meta {
+		text-align: center;
+
+		a {
+			white-space: nowrap;
+			color: #000;
+			text-decoration: none;
+			font-size: 0.8em;
+		}
+
+		a:hover,
+		a:focus,
+		a:active {
+			text-decoration: underline;
+		}
+	}
+}
+
+.sidebar .twitter-follow-container {
+	margin-left: 1em;
+}
+
+@media screen and (min-width: $breakpoint-bs-md) {
+
+	.sidebar.sidebarleft .twitter-follow-container {
+		text-align: right;
+		margin-right: 0;
+	}
+
+	.sidebar.sidebarright .twitter-follow-container {
+		margin-left: 0;
+	}
+
+	.sidebar.sidebarleft .tweets li {
+		margin-right: 0;
+	}
+
+	.sidebar.sidebarright .tweets li {
+		margin-left: 0;
+		margin-right: 0.5em;
+	}
+}
+
+/* List Category Posts Widget */
+.sidebar .widget_listcategorypostswidget > div,
+.sidebar .widget_listcategorypostswidget > a {
+	padding: 0 0.5em 0 2em;
+}
+
+.sidebar .widget_listcategorypostswidget {
+	//Headings (category name)
+	h5 {
+		margin: 0.5rem 0.5rem 0 2rem;
+	}
+
+	img {
+		border: 1px solid #f0f0f0;
+		max-width: 96%; /* Image does not overflow the content area */
+		padding: 0.25em;
+		text-align: center;
+	}
+
+	li a {
+		padding: 0;
+	}
+
+	hr {
+		display: none;
+	}
+
+	.lcp_date,
+	.lcp_title {
+		display: inline;
+	}
+
+	.lcp_author {
+		font-size: small;
+	}
+}
+
+
+//Thumbnail
+
+/* ul.lcp_catlist .lcp_thumbnail img {
+	background: #fff;
+	color: #888;
+	font-size: .9em;
+	line-height: 1.666667em;
+	border: 1px solid #f0f0f0;
+	max-width: 96%;
+	padding: 3px;
+	text-align: center;
+}
+
+.lcp_catlist li {
+	clear: both;
+}
+
+.lcp_date, .lcp_author {
+}
+ul.lcp_catlist {
+	list-style-type: none;
+	border: none;
+}
+ul.lcp_catlist li {
+	margin-top: .5em;
+	margin-left: 0;
+}
+*/
+
+/* Really Simple Twitter Widget */
+ul.really_simple_twitter_widget li {
+	line-height: 1.4em;
+	padding: 1em;
+}
+
+ul.really_simple_twitter_widget li a {
+	display: inline;
+	border: none;
+	padding: 0;
+}
+
+/* Gravity Forms Widget */
+.gform_widget .gform_wrapper {
+	padding: 0 2em;
+}
+
+.gform_widget ul.gform_fields {
+	border: none;
+}
+
+.gform_widget {
+
+	.gform_wrapper {
+
+		.gform_body {
+
+			div.ginput_container {
+				margin-top: 0 !important;
+			}
+
+			.field_sublabel_below .ginput_complex.ginput_container label,
+			.field_sublabel_below div[class*=gfield_time_].ginput_container label {
+				margin: 1px 0 0 1px !important;
+			}
+		}
+
+		.gform_footer {
+			display: inline-block;
+			padding: 0 !important;
+			margin: 0.5em 0 0 !important;
+		}
+
+		@media screen and (min-width: $breakpoint-bs-md) {
+
+			.top_label input.medium,
+			.top_label select.medium {
+				width: 100% !important;
+			}
+		}
+
+	}
+}
+
+
+/* Asides */
+section.post,
+section.page {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+
+	div.post-title {
+		order: 1;
+	}
+
+	aside#ppa-aside {
+		margin-top: 2em;
+		order: 4;
+	}
+
+	article {
+		order: 3;
+	}
+
+	section {
+		margin-top: 2em;
+		order: 10;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	section.post,
+	section.page {
+		display: block;
+
+		aside#ppa-aside {
+			margin-top: 0;
+		}
+	}
+}
+
+
+// TablePress overrides
+
+// Grabbed from Bootstrap Sass, cause we need it!
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+.mayflower-tablepress-wrap,
+.mayflower-tablepress-wrap .dataTables_wrapper {
+	overflow-x: auto;
+
+	@media screen and (max-width: 767px ) {
+		width: 100%;
+		margin-bottom: (20px * 0.75);
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid #eee;
+
+		// Tighten up spacing
+		> .table {
+			margin-bottom: 0;
+
+			// Ensure the content doesn't wrap
+			> thead,
+			> tbody,
+			> tfoot {
+
+				> tr {
+
+					> th,
+					> td {
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+
+		// Special overrides for the bordered tables
+		> .table-bordered {
+			border: 0;
+
+			// Nuke the appropriate borders so that the parent can handle them
+			> thead,
+			> tbody,
+			> tfoot {
+
+				> tr {
+
+					> th:first-child,
+					> td:first-child {
+						border-left: 0;
+					}
+
+					> th:last-child,
+					> td:last-child {
+						border-right: 0;
+					}
+				}
+			}
+
+			// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+			// chances are there will be only one `tr` in a `thead` and that would
+			// remove the border altogether.
+			> tbody,
+			> tfoot {
+
+				> tr:last-child {
+
+					> th,
+					> td {
+						border-bottom: 0;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+// Modified version of TablePress's CSS, fused with styles from Bootstrap
+
+/* Table description */
+.tablepress-table-description {
+	clear: both;
+	display: block;
+}
+
+/* Row background colors */
+.tablepress .odd td {
+	background-color: #f9f9f9;
+}
+
+.tablepress .even td {
+	background-color: #fff;
+}
+
+.tablepress .row-hover tr:hover td {
+	background-color: #f5f5f5;
+}
+
+/* Reset image layout in tables */
+.tablepress img {
+	margin: 0;
+	padding: 0;
+	border: none;
+	max-width: none;
+}
+
+/* Table wrapper */
+.dataTables_wrapper {
+	clear: both;
+	margin-bottom: 1em;
+}
+
+.dataTables_wrapper .tablepress {
+	clear: both;
+	margin: 0 !important;
+}
+
+/* Length Change menu */
+.dataTables_length {
+	float: left;
+	white-space: nowrap;
+}
+
+/* Filter/Search */
+.dataTables_filter {
+	float: right;
+	white-space: nowrap;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+	margin-left: 0.5em;
+}
+
+/* Table information */
+.dataTables_info {
+	clear: both;
+	float: left;
+	margin: 4px 0 0;
+}
+
+/* Pagination */
+.dataTables_paginate {
+	float: right;
+	margin: 4px 0 0;
+}
+
+.dataTables_paginate a {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+
+	color: #333;
+	background-color: #fff;
+	border-color: #ccc;
+
+	text-decoration: none;
+
+	margin-right: 1em;
+}
+
+.dataTables_paginate a:first-child {
+	margin-left: 0;
+}
+
+.dataTables_paginate a:last-child {
+	margin-right: 0;
+}
+
+.paginate_button:hover {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+
+.paginate_button.disabled {
+	cursor: not-allowed;
+	filter: alpha(opacity=50);
+	box-shadow: none;
+	opacity: 0.5;
+}
+
+.paginate_button.current {
+	font-weight: bold;
+	text-decoration: none;
+	cursor: default;
+}
+
+.paging_simple .paginate_button.previous::before,
+.paging_simple .paginate_button.next::after {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+}
+
+.paging_simple .paginate_button.previous::before {
+	content: "\f053";
+	padding-right: 0.5em;
+}
+
+.paging_simple .paginate_button.next::after {
+	content: "\f054";
+	padding-left: 0.5em;
+}
+
+
+/* Processing indicator */
+.dataTables_processing {
+	display: none; /* always hidden, we don't use it */
+}
+
+/* Scrolling */
+.dataTables_scroll {
+	clear: both;
+}
+
+.dataTables_scrollBody {
+	-webkit-overflow-scrolling: touch;
+}
+
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody th > div.dataTables_sizing,
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody td > div.dataTables_sizing {
+	height: 0;
+	overflow: hidden;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* Sorting */
+.tablepress .sorting,
+.tablepress .sorting_asc,
+.tablepress .sorting_desc {
+	position: relative;
+	padding-right: 20px; /* more right padding for sort arrows */
+	cursor: pointer;
+	outline: none;
+}
+
+.tablepress .sorting::after,
+.tablepress .sorting_asc::after,
+.tablepress .sorting_desc::after {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: auto;
+	right: 6px;
+	margin: auto;
+	height: 14px;
+	line-height: 1;
+}
+
+.tablepress .sorting::after {
+	content: "\f0dc";
+}
+
+.tablepress .sorting_asc::after {
+	content: "\f0dd";
+	padding: 0 0 2px;
+}
+
+.tablepress .sorting_desc::after {
+	content: "\f0de";
+}
+
+.tablepress .sorting_asc,
+.tablepress .sorting_desc {
+	//background-color: #eee;
+	border-bottom: 2px solid $brand-primary;
+}
+
+.tablepress .sorting:hover,
+.tablepress .sorting_asc:hover,
+.tablepress .sorting_desc:hover {
+	background-color: $brand-info;
+	border-bottom: 2px solid $brand-primary;
+}
+
+/* Hide the sorting arrows in the extra table that is added for scrolling */
+.dataTables_scrollBody .tablepress thead th::after {
+	content: "";
+}
+
+/* Self clearing */
+.dataTables_wrapper::after {
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.dataTables_wrapper label input,
+.dataTables_wrapper label select {
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.dataTables_wrapper label input:focus,
+.dataTables_wrapper label select:focus {
+	border-color: #66afe9;
+	outline: 0;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+
+/**
+ * Fixes for Awesome Support plugin
+ */
+.wpas-submission-form-inside-after-subject.container {
+	max-width: 100%;
+}
+
+#wpas_submit_survey {
+
+	label {
+		display: block;
+	}
+
+	textarea {
+		width: 100%;
+	}
+}
+
+/* ####################################### */
+
+/* ----- Single CE Courses  ----- */
+
+/* ###################################### */
+
+#ce-header {
+	width: 100%;
+
+	h2 {
+		text-align: center;
+	}
+}
+
+#ce-courses {
+	position: relative;
+}
+
+#ce-overlay {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.75);
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.sitewide-notice {
+	padding: 0.25em 0.5em;
+	background: #c4122f;
+
+	.alert {
+		margin: 0;
+		padding: 0.5em;
+	}
+}
+
+@media screen and (min-width: $breakpoint-bs-md) {
+
+	.sitewide-notice {
+		padding: 0.5em 2em;
+	}
+}

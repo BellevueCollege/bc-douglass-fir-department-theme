@@ -1,0 +1,43 @@
+{
+  "name": "bc-douglas-fir-department-theme",
+  "version": "0.0.0",
+  "description": "The Bellevue College Theme",
+  "main": " ",
+  "browserslist": [
+    "> 2% in my stats",
+    "last 2 major versions",
+    "Firefox ESR",
+    "not ie <= 11",
+    "not dead"
+  ],
+  "dependencies": {
+    "acorn": "^8.6.0",
+    "jquery": "^1.12.4",
+    "npm": "^9.1.2",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "@wordpress/eslint-plugin": "^13.5.0",
+    "bootstrap": "^4.6.2",
+    "eslint": "^8.11.0",
+		"globals": "github:BellevueCollege/globals#trunk",
+
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "prettier": "^2.5.1",
+    "sass": "^1.44.0",
+    "stylelint": "^14.1.0",
+    "uglify-save-license": "^0.4.1"
+  },
+  "scripts": {
+    "test": " "
+  },
+  "author": "Bellevue College ITS",
+  "license": "GPL-2.0"
+}

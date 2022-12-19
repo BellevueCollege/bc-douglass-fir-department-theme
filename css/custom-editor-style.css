@@ -1,0 +1,83 @@
+/* Custom Editor Styles
+ * Loaded in the TinyMCE Visual Editor
+ */
+
+/* Not SCSS, so can't use vars. Just here for reference! *
+$brand-info:            #afd7ff; // Lightened BC Brand Blue to meet a11y requirements
+$brand-warning:         #F2C01E; // BC Brand Yellow
+$brand-danger:          #C4122F; // BC Brand Red
+*/
+
+/* From WordPress Accessibility Plugin */
+.wpa-image-missing-alt {
+	border: 2px solid red;
+	box-shadow: 0 0 2px 2px #ffa;
+}
+
+/* General styling and max-width */
+body#tinymce.wp-editor {
+	background: #fff;
+	margin: 1em 2em;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 95%;
+	max-width:1170px;
+}
+
+/* Structure View */
+div,
+section,
+form,
+span {
+	border: 2px dotted #ffcfcf;
+}
+/* Prevent border around expected elements */
+.wpview .gallery,
+.wpview-end,
+div.mceTemp {
+	border: none;
+}
+
+.row {
+	border: 1px dashed #dfdfdf;
+}
+[class*="col-"],
+.wp-caption {
+	border: 1px dashed #cfcfcf;
+}
+
+/* A11y Messages */
+
+/* Tables - often problematic! */
+table {
+	outline: 2px dashed #F2C01E !important;
+	outline-offset: .25em;
+}
+
+table:before {
+	background: #F2C01E;
+	display: block;
+	padding: .1em 1em;
+	margin: .25em;
+	font-weight:bold;
+	content: "Warning: Tables can cause accessibility issues!";
+	font-size: .75em;
+}
+
+/* Images - alt text issues */
+
+img[alt=""] {
+	outline: 4px dashed #F2C01E;
+	outline-offset: .25em;
+}
+
+img:not([alt]),
+a img[alt=""] {
+	outline: 4px dashed #C4122F;
+	outline-offset: .25em;
+}
+
+.gallery img[alt=""] {
+	outline: initial !important; /* galleries don't have alt text in editor */
+	outline-offset: initial;
+}

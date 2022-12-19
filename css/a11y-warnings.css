@@ -1,0 +1,12 @@
+/* A11y Messages */
+
+/* Images - alt text issues */
+
+#main img[alt=""] {
+	outline: 4px dashed #F2C01E !important;
+}
+
+#main img:not([alt]),
+#main a > img[alt=""] {
+	outline: 4px dashed #C4122F !important;
+}

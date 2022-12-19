@@ -1,0 +1,171 @@
+/* Custom Editor Styles
+ * Loaded in the TinyMCE Visual Editor
+ */
+
+/* Not SCSS, so can't use vars. Just here for reference! *
+$brand-info:            #afd7ff; // Lightened BC Brand Blue to meet a11y requirements
+$brand-warning:         #F2C01E; // BC Brand Yellow
+$brand-danger:          #C4122F; // BC Brand Red
+*/
+
+/* Import from Globals */
+
+.wp-block {
+
+	@import "./node_modules/globals/src/4/sass/partials/base";
+	@import "./node_modules/globals/src/4/sass/partials/bootstrap-overrides";
+	@import "./node_modules/globals/src/4/sass/partials/typography";
+	@import "./node_modules/globals/src/4/sass/partials/structure";
+	@import "./node_modules/globals/src/4/sass/partials/pagination";
+
+	/* Override Bootstrap in Nested Blocks */
+	.components-icon-button {
+		overflow: hidden;
+	}
+
+
+}
+
+/* Main column width */
+.wp-block {
+	max-width: 810px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+	max-width: 870px;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+/* Images - alt text issues */
+
+body.gutenberg-editor-page .editor-block-list__block {
+
+	img[alt=""] {
+		outline: 4px dashed #f2c01e;
+		outline-offset: 0.25em;
+	}
+
+	img:not([alt]),
+	a img[alt=""] {
+		outline: 4px dashed #c4122f;
+		outline-offset: 0.25em;
+	}
+
+}
+
+
+/* Style things */
+div.edit-post-visual-editor.editor-styles-wrapper {
+	font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Style Quote Block */
+body.gutenberg-editor-page .editor-block-list__block {
+
+	.alignnone {
+		margin: 20px 20px 5px 0;
+	}
+
+	.alignnone,
+	.alignright,
+	.alignleft,
+	.aligncenter {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+
+	.wp-post-image.alignright,
+	.wp-post-image.alignleft,
+	.wp-caption.alignright,
+	.wp-caption.alignleft,
+	.wp-post-image.aligncenter,
+	.wp-caption.aligncenter,
+	.wp-post-image.alignnone,
+	.wp-caption.alignnone {
+		max-width: 100%;
+	}
+
+	.wp-caption.alignnone {
+		margin: 20px 20px 5px 0;
+	}
+
+	.wp-caption .wp-caption-text,
+	.gallery-caption,
+	.entry-caption {
+		font-size: 0.85em;
+		line-height: 16px;
+		margin: 0.25em 0;
+		padding: 0 0.25em;
+	}
+
+	.wp-caption-dd {
+		margin: 0;
+		padding: 0;
+	}
+
+	.content-row {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+
+	.row-padding {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+	blockquote.wp-block-quote {
+		border-left: #eee 5px solid;
+		padding-left: 3em;
+
+		&,
+		p,
+		cite {
+			font-family: Georgia, "Times New Roman", Times, serif;
+			font-size: 1.2em;
+			margin: 0;
+		}
+
+		cite {
+			font-style: italic;
+			color: inherit;
+		}
+
+		&::before {
+			display: block;
+			content: "\201C";
+			font-size: 6rem;
+			position: absolute;
+			left: 0.1em;
+			top: -0.5em;
+			color: #777;
+		}
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+
+	body.gutenberg-editor-page .editor-block-list__block {
+
+		.alignright {
+			float: right;
+			margin: 0.5em 0 1em 1em;
+		}
+
+		.alignleft {
+			float: left;
+			margin: 0.5em 1em 1em 0;
+		}
+
+		.aligncenter {
+			display: block;
+			margin: 0.5em auto 0.5em auto;
+		}
+	}
+}

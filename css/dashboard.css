@@ -1,0 +1,45 @@
+/* ####################################### */
+/* ----- Staff CPT admin styles      ----- */
+/* ###################################### */
+
+.wp-list-table td.thumbnail img.attachment-sort-screen-thumbnail {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #333;
+}
+
+
+/* ###################################### */
+/* ----- Other CPT-specific styles  ----- */
+/* ###################################### */
+
+/* Used in staff & Slider CPT  */
+.wp-list-table td { background: white; }
+.wp-list-table .column-sorting { padding: 3px 10px; width: 50px; }
+.wp-list-table .column-sorting img { cursor: move; }
+.wp-list-table td.column-sorting { vertical-align: middle; text-align: center; }
+
+/* ##################################### */
+/* Carousel Admin */
+.column-thumbnail {
+	width: 140px;
+}
+.widefat .carousel-caption p {   /*what's widefat?*/
+  margin: 0;
+  padding: 0;
+}
+.widefat td {
+	padding: 4px 7px;
+}
+td.column-thumbnail .active .img-wrapper {
+	position: relative;
+	max-width: 1024px;
+}
+
+td.column-thumbnail img {
+}
+
+tbody.ui-sortable td {
+	padding: 10px 0px;
+}
