@@ -5,7 +5,7 @@
  * @package Mayflower
  */
 
-$mayflower_options = mayflower_get_options();
+$bc_douglas_fir_options = bc_douglas_fir_get_options();
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?>>
 	<h2 <?php post_class(); ?>>
@@ -13,23 +13,23 @@ $mayflower_options = mayflower_get_options();
 	</h2>
 	<?php
 	// Check if post date or author should be displayed.
-	if ( $mayflower_options['display_post_author'] || $mayflower_options['display_post_date'] ) :
+	if ( $bc_douglas_fir_options['display_post_author'] || $bc_douglas_fir_options['display_post_date'] ) :
 		?>
 		<p class="entry-date">
 			<?php
 			// Check if post date should be displayed.
-			if ( $mayflower_options['display_post_date'] ) :
+			if ( $bc_douglas_fir_options['display_post_date'] ) :
 				?>
 				<?php
-				esc_attr_e( 'Date posted: ', 'mayflower' );
+				esc_attr_e( 'Date posted: ', 'bc-douglas-fir' );
 				echo get_the_date();
 				?>
 				<?php
 			endif;
 			// Check if post author should be displayed.
-			if ( $mayflower_options['display_post_author'] ) :
+			if ( $bc_douglas_fir_options['display_post_author'] ) :
 				?>
-				&nbsp;<span class="pull-right"><?php esc_attr_e( 'Author: ', 'mayflower' ); ?><?php the_author(); ?></span>
+				&nbsp;<span class="pull-right"><?php esc_attr_e( 'Author: ', 'bc-douglas-fir' ); ?><?php the_author(); ?></span>
 			<?php endif; ?>
 		</p>
 	<?php endif; ?>

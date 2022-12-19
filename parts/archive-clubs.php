@@ -43,6 +43,6 @@ query_posts( $query_string . '&orderby=title&order=ASC&posts_per_page=-1' ); // 
 		<?php endwhile; ?>
 	</ul>
 	<?php wp_reset_postdata(); ?>
-	<?php mayflower_pagination(); ?>
+	<?php bc_douglas_fir_pagination(); ?>
 	<?php wp_reset_query(); ?>
 <?php endif; ?>

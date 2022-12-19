@@ -22,5 +22,5 @@ $posts = query_posts( $query_string . '&orderby=title&order=asc&posts_per_page=-
 		<?php endwhile; ?>
 	</ul>
 
-	<?php mayflower_pagination(); ?>
+	<?php bc_douglas_fir_pagination(); ?>
 <?php endif; ?>

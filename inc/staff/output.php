@@ -17,7 +17,7 @@ $loop = new WP_Query(
 
 
 
-if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['staff_toggle'] ) {
+if ( 'list-view' === $bc_douglas_fir_options['staff_layout'] && $bc_douglas_fir_options['staff_toggle'] ) {
 	?>
 	<div class="staff-details">
 		<?php
@@ -30,7 +30,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 		<div class="media">
 			<a class="align-self-start mr-3" href="<?php the_permalink(); ?>">
 				<?php
-				if ( true === $mayflower_options['staff_picture_toggle'] ) {
+				if ( true === $bc_douglas_fir_options['staff_picture_toggle'] ) {
 					if ( has_post_thumbnail() ) {
 						the_post_thumbnail(
 							'thumbnail',
@@ -67,7 +67,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 					<?php } ?>
 
 					<?php
-					if ( true === $mayflower_options['staff_phone_toggle'] ) {
+					if ( true === $bc_douglas_fir_options['staff_phone_toggle'] ) {
 						if ( isset( $post_meta_data['_staff_phone'][0] ) ) {
 							?>
 							<li>
@@ -80,7 +80,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 					?>
 
 					<?php
-					if ( true === $mayflower_options['staff_location_toggle'] ) {
+					if ( true === $bc_douglas_fir_options['staff_location_toggle'] ) {
 						if ( isset( $post_meta_data['_staff_office_location'][0] ) ) {
 							?>
 							<li>
@@ -93,7 +93,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 					?>
 
 					<?php
-					if ( true === $mayflower_options['staff_hours_toggle'] ) {
+					if ( true === $bc_douglas_fir_options['staff_hours_toggle'] ) {
 						if ( isset( $post_meta_data['_staff_office_hours'][0] ) ) {
 							?>
 						<li>
@@ -107,9 +107,9 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 
 				</ul>
 				<?php
-				if ( true === $mayflower_options['staff_bio_toggle'] ) {
+				if ( true === $bc_douglas_fir_options['staff_bio_toggle'] ) {
 					if ( '' === get_post()->post_content ) {
-						if ( true === $mayflower_options['staff_more_toggle'] ) {
+						if ( true === $bc_douglas_fir_options['staff_more_toggle'] ) {
 							?>
 						<p>
 							<a href="<?php the_permalink(); ?>">...more about <?php the_title(); ?></a>
@@ -125,7 +125,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 						echo wp_kses_post( the_excerpt() );
 
 						if ( $content_count < 55 ) { // echo excerpt and 'more' link if content is less than 55 words.
-							if ( true === $mayflower_options['staff_more_toggle'] ) {
+							if ( true === $bc_douglas_fir_options['staff_more_toggle'] ) {
 								?>
 							<p><a href="<?php the_permalink(); ?>">...more about <?php the_title(); ?></a></p>
 								<?php
@@ -133,7 +133,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 						}
 					}
 				} else { // staff_bio_toggle == false.
-					if ( true === $mayflower_options['staff_more_toggle'] ) {
+					if ( true === $bc_douglas_fir_options['staff_more_toggle'] ) {
 						?>
 					<p>
 						<a href="<?php the_permalink(); ?>">...more about <?php the_title(); ?></a>
@@ -150,7 +150,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 
 	</div><!-- Staff Details -->
 
-<?php } elseif ( 'grid-view' === $mayflower_options['staff_layout'] && $mayflower_options['staff_toggle'] ) { ?>
+<?php } elseif ( 'grid-view' === $bc_douglas_fir_options['staff_layout'] && $bc_douglas_fir_options['staff_toggle'] ) { ?>
 	<div class="row">
 	<?php
 	// ########################
@@ -166,7 +166,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 		<div class="col-lg-4 col-sm-6 staff-details">
 			<div class="card text-center">
 				<?php
-				if ( true === $mayflower_options['staff_picture_toggle'] ) {
+				if ( true === $bc_douglas_fir_options['staff_picture_toggle'] ) {
 					if ( has_post_thumbnail() ) {
 						?>
 						<a href="<?php the_permalink(); ?>">
@@ -203,7 +203,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 
 				</div><!-- caption staff-details staff-details-grid-top-->
 				<?php
-				if ( true === $mayflower_options['staff_more_toggle'] ) {
+				if ( true === $bc_douglas_fir_options['staff_more_toggle'] ) {
 					?>
 					<div class="card-footer text-secondary">
 						<small><a class="text-sm" href="<?php the_permalink(); ?>">More Details<span class="sr-only"> about <?php the_title(); ?></span></a></small>
@@ -216,7 +216,7 @@ if ( 'list-view' === $mayflower_options['staff_layout'] && $mayflower_options['s
 	?>
 	</div>
 	<?php
-} elseif ( ! $mayflower_options['staff_toggle'] ) {
+} elseif ( ! $bc_douglas_fir_options['staff_toggle'] ) {
 	echo '<!--Staff functionality is not currently enabled on this website-->';
 }
 

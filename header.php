@@ -8,11 +8,11 @@
  */
 
 /* Globally declare variables used in a variety of locations */
-global $post, $mayflower_options, $mayflower_brand, $mayflower_brand_css, $mayflower_theme_version, $globals;
+global $post, $bc_douglas_fir_options, $mayflower_brand, $mayflower_brand_css, $mayflower_theme_version, $globals;
 
 
-if ( ! ( is_array( $mayflower_options ) ) ) {
-	$mayflower_options = mayflower_get_options();
+if ( ! ( is_array( $bc_douglas_fir_options ) ) ) {
+	$bc_douglas_fir_options = bc_douglas_fir_get_options();
 }
 
 $mayflower_theme_version = wp_get_theme();

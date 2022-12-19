@@ -1,10 +1,10 @@
 <?php
 /**
- * Mayflower Functions
+ * BC Douglas Fir Theme Functions
  *
  * All the good stuff (or at least the require to where the good stuff is...)
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 /**
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || die( 'Sorry, no direct access allowed' );
 /**
  * Define constant used to bust style caches
  */
-define( 'MAYFLOWER_STYLE_VERSION', '1.3.1' );
+define( 'BC_DOUGLAS_FIR_STYLE_VERSION', '0.0.0' );
 
 /*
  * Load theme options framework
@@ -44,12 +44,12 @@ require get_template_directory() . '/inc/functions/theme-setup.php';
 require get_template_directory() . '/inc/functions/options-customizer.php';
 
 /*
-* Load Mayflower Options into Variable
+* Load Options into Variable
 *
 * There should be a better way of doing this, but this needs to be loaded up
 * at this point, so that it can be used globally within the next includes
 */
-$mayflower_options = mayflower_get_options();
+$bc_douglas_fir_options = bc_douglas_fir_get_options();
 
 /**
  * Globals Options Page Setup
@@ -84,70 +84,55 @@ define( 'PREREQUISITEURL', '//www.bellevuecollege.edu/transfer/prerequisites/' )
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker-4.0.2/class-wp-bootstrap-navwalker.php';
 
 /**
- * Use Filter to Load Globals 4 Instead of Globals 3
+ * Load Embedded Plugins
  *
- * Replace 3 with 4 in URLs and paths.
- *
- * @since 3.0.0.
- *
- * @param string $path Globals Path.
- */
-function mayflower_globals_4_filter( $path ) {
-	return str_replace( '3', '4', $path );
-}
-add_filter( 'mayflower_globals_path', 'mayflower_globals_4_filter', 10, 3 );
-add_filter( 'mayflower_globals_url', 'mayflower_globals_4_filter', 10, 3 );
-
-/**
- * Load Mayflower Embedded Plugins
- *
- * These files provide plugin-like functionality embedded within Mayflower.
+ * These files provide plugin-like functionality embedded within the theme.
  *
  * @since 1.0
  */
 
 /**
- * Mayflower Slider
+ * Slider
  */
-if ( true === $mayflower_options['slider_toggle'] ) {
-	if ( file_exists( get_template_directory() . '/inc/mayflower-slider/slider.php' ) ) {
-		require get_template_directory() . '/inc/mayflower-slider/slider.php';
+if ( true === $bc_douglas_fir_options['slider_toggle'] ) {
+	if ( file_exists( get_template_directory() . '/inc/slider/slider.php' ) ) {
+		require get_template_directory() . '/inc/slider/slider.php';
 	}
 }
 
 /**
- * Mayflower Staff
+ * Staff
  */
-if ( true === $mayflower_options['staff_toggle'] ) {
-	if ( file_exists( get_template_directory() . '/inc/mayflower-staff/staff.php' ) ) {
-		require get_template_directory() . '/inc/mayflower-staff/staff.php';
+if ( true === $bc_douglas_fir_options['staff_toggle'] ) {
+	if ( file_exists( get_template_directory() . '/inc/staff/staff.php' ) ) {
+		require get_template_directory() . '/inc/staff/staff.php';
 	}
 }
 
 /**
  * SEO Post Fields
  */
-if ( file_exists( get_template_directory() . '/inc/mayflower-seo/mayflower_seo.php' ) ) {
-	require get_template_directory() . '/inc/mayflower-seo/mayflower_seo.php';
+if ( file_exists( get_template_directory() . '/inc/seo/seo.php' ) ) {
+	require get_template_directory() . '/inc/seo/seo.php';
 }
 
 /**
  * Course Description Shortcode
  */
-if ( file_exists( get_template_directory() . '/inc/mayflower-course-descriptions/mayflower-course-descriptions.php' ) ) {
-	require get_template_directory() . '/inc/mayflower-course-descriptions/mayflower-course-descriptions.php';
+if ( file_exists( get_template_directory() . '/inc/course-descriptions/course-descriptions.php' ) ) {
+	require get_template_directory() . '/inc/course-descriptions/course-descriptions.php';
 }
 
 
 // Make this function pluggable.
-if ( ! function_exists( 'mayflower_pagination' ) ) {
+if ( ! function_exists( 'bc_douglas_fir_pagination' ) ) {
 	/**
 	 * Custom Pagination
 	 *
 	 * Output pagination using Globals/Mayflower styles.
 	 * Function is pluggable and can be over-ridden from child themes.
 	 */
-	function mayflower_pagination() {
+	function bc_douglas_fir_pagination() {
 		$big = 999999999; // need an unlikely integer.
 
 		$paginated_links = paginate_links(
@@ -189,14 +174,14 @@ if ( ! function_exists( 'mayflower_pagination' ) ) {
 
 
 /**
- * Mayflower Is Blog function
+ * 'Is Blog' function
  *
  * Returns true if the current page is a blog page
- * Filterable via mayflower_is_blog
+ * Filterable via bc_douglas_fir_is_blog
  *
  * @return boolean $output True if is a blog page, else False.
  */
-function mayflower_is_blog() {
+function bc_douglas_fir_is_blog() {
 	$output = false;
 
 	if ( is_home() || is_archive() || is_singular( 'post' ) || is_post_type_archive( 'post' ) ) {
@@ -210,7 +195,7 @@ function mayflower_is_blog() {
 	 *
 	 * @param boolean $output.
 	 */
-	$output = apply_filters( 'mayflower_is_blog', $output );
+	$output = apply_filters( 'bc_douglas_fir_is_blog', $output );
 
 	// Return filtered output.
 	return $output;
@@ -220,15 +205,15 @@ function mayflower_is_blog() {
  * Has Active Sidebar function
  *
  * Check if sidebar widgets are present.
- * Filterable via mayflower_active_sidebar
+ * Filterable via bc_douglas_fir_active_sidebar
  *
  * @return boolean  True if current page has an active sidebar.
  */
-function has_active_sidebar() {
+function bc_douglas_fir_has_active_sidebar() {
 	$sidebar_is_active = false;
 
 	// Default functionality.
-	if ( mayflower_is_blog() ) {
+	if ( bc_douglas_fir_is_blog() ) {
 		if ( is_active_sidebar( 'top-global-widget-area' ) ||
 			is_active_sidebar( 'blog-widget-area' ) ||
 			is_active_sidebar( 'global-widget-area' ) ) {
@@ -252,34 +237,34 @@ function has_active_sidebar() {
 	}
 
 	/**
-	 * Add mayflower_active_sidebar filter
+	 * Add bc_douglas_fir_active_sidebar filter
 	 *
 	 * Allows plugins and themes to override
 	 * active sidebar state
 	 *
 	 * @param boolean $sidebar_is_active.
 	 */
-	$sidebar_is_active = apply_filters( 'mayflower_active_sidebar', $sidebar_is_active );
+	$sidebar_is_active = apply_filters( 'bc_douglas_fir_active_sidebar', $sidebar_is_active );
 
 	return $sidebar_is_active;
 }
 
 
 /**
- * Mayflower Display Sidebar hook.
+ * Display Sidebar hook.
  *
  * Hooks in above Static in sidebar.php. Allow plugins or child themes to
  * add widgets to the sidebar, above other widget areas.
  */
-function mayflower_display_sidebar() {
-	do_action( 'mayflower_display_sidebar' );
+function bc_douglas_fir_display_sidebar() {
+	do_action( 'bc_douglas_fir_display_sidebar' );
 }
 
 /**
  * Is Multisite Home function
  *
  * Return true if on the multisite root homepage
- * Filterable via mayflower_is_multisite_home
+ * Filterable via bc_douglas_fir_is_multisite_home
  *
  * @return boolean $output True if on the Multisite homepage, else False.
  */
@@ -297,7 +282,7 @@ function is_multisite_home() {
 	 *
 	 * @param boolean $output.
 	 */
-	$output = apply_filters( 'mayflower_is_multisite_home', $output );
+	$output = apply_filters( 'bc_douglas_fir_is_multisite_home', $output );
 
 	// Return filtered output.
 	return $output;
@@ -313,7 +298,7 @@ function is_multisite_home() {
  * @link https://github.com/BellevueCollege/bc-st-search-client Primary plugin that uses this.
  * @return string $output Trimmed URL of current site.
  */
-function mayflower_trimmed_url() {
+function bc_douglas_fir_trimmed_url() {
 	$site_url = get_site_url( null, '', 'https' );
 	$parsed   = wp_parse_url( $site_url );
 	$output   = $parsed['host'] . $parsed['path'];
@@ -323,7 +308,7 @@ function mayflower_trimmed_url() {
 	 *
 	 * @param string $output Trimmed URL.
 	 */
-	$output = apply_filters( 'mayflower_trimmed_url', $output );
+	$output = apply_filters( 'bc_douglas_fir_trimmed_url', $output );
 
 	// Return filtered output.
 	return $output;
@@ -336,7 +321,7 @@ function mayflower_trimmed_url() {
  * Used in page templates.
  * TODO: move to function
  */
-$mayflower_brand     = mayflower_get_option( 'mayflower_brand' );
+$mayflower_brand     = bc_douglas_fir_get_option( 'mayflower_brand' );
 $mayflower_brand_css = '';
 if ( 'lite' === $mayflower_brand ) {
 	$mayflower_brand_css = 'globals-lite';

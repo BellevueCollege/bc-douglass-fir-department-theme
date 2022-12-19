@@ -72,7 +72,7 @@ add_filter( 'widget_title', 'mayflower_filter_widget_title' );
  */
 function mayflower_untitled_post( $title ) {
 	if ( '' === $title ) {
-		return apply_filters( 'mayflower_untitled_post_title', '<em>(' . __( 'Untitled', 'mayflower' ) . ')</em>' );
+		return apply_filters( 'mayflower_untitled_post_title', '<em>(' . __( 'Untitled', 'bc-douglas-fir' ) . ')</em>' );
 	} else {
 		return $title;
 	}
@@ -171,7 +171,7 @@ function mayflower_document_title_separator( $mayflower_document_title_separator
  * @param string $excerpt Page Excerpt Text.
  */
 function mayflower_the_excerpt_override( $excerpt ) {
-	$read_more = ' <a class="read-more" href="' . get_permalink() . '">' . __( '...more about ', 'mayflower' ) . get_the_title() . '</a>';
+	$read_more = ' <a class="read-more" href="' . get_permalink() . '">' . __( '...more about ', 'bc-douglas-fir' ) . get_the_title() . '</a>';
 
 	$excerpt_from_content = wpautop(
 		wp_trim_words(
@@ -230,7 +230,7 @@ function mayflower_blacklist_blocks() {
 		'mayflower-blacklist-blocks',
 		get_theme_file_uri( 'js/blocks-blacklist.js', __FILE__ ),
 		array( 'wp-blocks' ),
-		MAYFLOWER_STYLE_VERSION
+		BC_DOUGLAS_FIR_STYLE_VERSION
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'mayflower_blacklist_blocks' );
@@ -252,7 +252,7 @@ function mayflower_add_editor_styles() {
 	add_editor_style(
 		array(
 			$globals->url . 'c/g.css?=' . $globals->version,
-			'style.css?=' . MAYFLOWER_STYLE_VERSION,
+			'style.css?=' . BC_DOUGLAS_FIR_STYLE_VERSION,
 			'css/custom-editor-style.css',
 		)
 	);
@@ -373,10 +373,10 @@ if ( ! function_exists( 'mayflower_body_class_ia' ) ) {
 	 * @param array $classes Body Classes.
 	 */
 	function mayflower_body_class_ia( $classes ) {
-		$mayflower_options = mayflower_get_options();
+		$bc_douglas_fir_options = bc_douglas_fir_get_options();
 
 		// add ia_options to classes.
-		$classes[] = $mayflower_options['global_nav_selection'];
+		$classes[] = $bc_douglas_fir_options['global_nav_selection'];
 
 		// return the $classes array.
 		return $classes;
@@ -411,9 +411,9 @@ add_action( 'widgets_init', 'mayflower_register_sidebar' );
 function mayflower_register_top_global_sidebar() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Top Global Sidebar Widget Area', 'mayflower' ),
+			'name'          => __( 'Top Global Sidebar Widget Area', 'bc-douglas-fir' ),
 			'id'            => 'top-global-widget-area',
-			'description'   => __( 'This is the top global widget area. Items will appear on all pages throughout the web site.', 'mayflower' ),
+			'description'   => __( 'This is the top global widget area. Items will appear on all pages throughout the web site.', 'bc-douglas-fir' ),
 			'before_widget' => '<div class="wp-widget wp-widget-global %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title px-3">',
@@ -429,9 +429,9 @@ add_action( 'mayflower_register_sidebar', 'mayflower_register_top_global_sidebar
 function mayflower_register_static_sidebar() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Static Page Sidebar Widget Area', 'mayflower' ),
+			'name'          => __( 'Static Page Sidebar Widget Area', 'bc-douglas-fir' ),
 			'id'            => 'page-widget-area',
-			'description'   => __( 'This is the static page widget area. Items will appear on all static pages.', 'mayflower' ),
+			'description'   => __( 'This is the static page widget area. Items will appear on all static pages.', 'bc-douglas-fir' ),
 			'before_widget' => '<div class="wp-widget wp-widget-static %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title px-3">',
@@ -447,9 +447,9 @@ add_action( 'mayflower_register_sidebar', 'mayflower_register_static_sidebar', 4
 function mayflower_register_blog_sidebar() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Blog Sidebar Widget Area', 'mayflower' ),
+			'name'          => __( 'Blog Sidebar Widget Area', 'bc-douglas-fir' ),
 			'id'            => 'blog-widget-area',
-			'description'   => __( 'This is the blog widget area. Items will appear on all blog related pages.', 'mayflower' ),
+			'description'   => __( 'This is the blog widget area. Items will appear on all blog related pages.', 'bc-douglas-fir' ),
 			'before_widget' => '<div class="wp-widget wp-widget-blog %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title px-3">',
@@ -465,9 +465,9 @@ add_action( 'mayflower_register_sidebar', 'mayflower_register_blog_sidebar', 6 )
 function mayflower_register_bottom_global_sidebar() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Bottom Global Sidebar Widget Area', 'mayflower' ),
+			'name'          => __( 'Bottom Global Sidebar Widget Area', 'bc-douglas-fir' ),
 			'id'            => 'global-widget-area',
-			'description'   => __( 'This is the bottom global widget area. Items will appear on all pages throughout the web site.', 'mayflower' ),
+			'description'   => __( 'This is the bottom global widget area. Items will appear on all pages throughout the web site.', 'bc-douglas-fir' ),
 			'before_widget' => '<div class="wp-widget wp-widget-global %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title px-3">',
@@ -571,39 +571,39 @@ function mayflower_scripts() {
 	$globals = new Globals();
 	wp_enqueue_style( 'globals', $globals->url . 'c/g.css', null, $globals->version, 'screen' );
 	wp_enqueue_style( 'globals-print', $globals->url . 'c/p.css', null, $globals->version, 'print' );
-	wp_enqueue_style( 'mayflower', get_stylesheet_uri(), null, MAYFLOWER_STYLE_VERSION );
+	wp_enqueue_style( 'bc-douglas-fir', get_stylesheet_uri(), null, BC_DOUGLAS_FIR_STYLE_VERSION );
 
 	wp_enqueue_script( 'jquery' );
 	// wp_enqueue_script( 'globals-head', $globals->url . 'j/ghead-full.min.js', array( 'jquery' ), $globals->version, false );
 	wp_enqueue_script( 'globals', $globals->url . 'j/gfoot-full.min.js', array( 'jquery' ), $globals->version, true );
-	wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js#deferload', array( 'jquery' ), MAYFLOWER_STYLE_VERSION, true );
+	wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js#deferload', array( 'jquery' ), BC_DOUGLAS_FIR_STYLE_VERSION, true );
 
 	wp_enqueue_script( 'youvisit', 'https://www.youvisit.com/tour/Embed/js2#asyncdeferload', null, 'auto', true );
 
 	/**
 	 * Search script
 	 */
-	if ( mayflower_get_option( 'limit_searchform_scope' ) ) {
-		$mayflower_options      = mayflower_get_options();
-		$limit_searchform_scope = $mayflower_options['limit_searchform_scope'];
+	if ( bc_douglas_fir_get_option( 'limit_searchform_scope' ) ) {
+		$bc_douglas_fir_options      = bc_douglas_fir_get_options();
+		$limit_searchform_scope = $bc_douglas_fir_options['limit_searchform_scope'];
 		$search_url_default     = 'https://www.bellevuecollege.edu/search/';
-		$search_url             = ( $limit_searchform_scope && ( '' !== $mayflower_options['custom_search_url'] ) ) ?
-										$mayflower_options['custom_search_url'] : $search_url_default;
+		$search_url             = ( $limit_searchform_scope && ( '' !== $bc_douglas_fir_options['custom_search_url'] ) ) ?
+										$bc_douglas_fir_options['custom_search_url'] : $search_url_default;
 		$search_field_id        = $limit_searchform_scope ? 'college-search-field-custom' : 'college-search-field';
-		$filter_value           = mayflower_trimmed_url();
-		$search_api_key         = '' !== $mayflower_options['custom_search_api_key'] ? $mayflower_options['custom_search_api_key'] :
+		$filter_value           = bc_douglas_fir_trimmed_url();
+		$search_api_key         = '' !== $bc_douglas_fir_options['custom_search_api_key'] ? $bc_douglas_fir_options['custom_search_api_key'] :
 									'YUFwdxQ6-Kaa9Zac4rpb'; // <-- Default API Key
 		$search_query_peram     = 'txtQuery';
 		$filter_peram           = 'site[]'; // hardcoded default.
 
-		wp_enqueue_script( 'search', get_template_directory_uri() . '/js/search.js#deferload', array( 'jquery', 'globals' ), MAYFLOWER_STYLE_VERSION, true );
+		wp_enqueue_script( 'search', get_template_directory_uri() . '/js/search.js#deferload', array( 'jquery', 'globals' ), BC_DOUGLAS_FIR_STYLE_VERSION, true );
 		wp_add_inline_script(
 			'search',
 			'var limit_searchform_scope =' . esc_attr( $limit_searchform_scope ) .
 				'; var search_api_key ="' . esc_attr( $search_api_key ) .
 				'"; var filter_value ="' . esc_attr( $filter_value ) .
 				'"; var search_field_id ="' . esc_attr( $search_field_id ) .
-				'"; var custom_search_url ="' . esc_attr( $mayflower_options['custom_search_url'] ) .
+				'"; var custom_search_url ="' . esc_attr( $bc_douglas_fir_options['custom_search_url'] ) .
 				'"; var search_url_default ="' . esc_attr( $search_url_default ) .
 				'";',
 			'before'
@@ -618,7 +618,7 @@ function mayflower_scripts() {
 	if ( is_page_template( 'page-nav-page-fluid-grid.php' ) ) {
 		wp_enqueue_script( 'imagesloaded' );
 		wp_enqueue_script( 'masonry' );
-		wp_enqueue_script( 'page-nav-page-fluid-grid', get_template_directory_uri() . '/js/page-nav-page-fluid-grid.js', array( 'imagesloaded', 'masonry' ), MAYFLOWER_STYLE_VERSION, true );
+		wp_enqueue_script( 'page-nav-page-fluid-grid', get_template_directory_uri() . '/js/page-nav-page-fluid-grid.js', array( 'imagesloaded', 'masonry' ), BC_DOUGLAS_FIR_STYLE_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mayflower_scripts' );
@@ -716,10 +716,10 @@ function wpa_insert_alt_verification( $form_fields, $post ) {
 		$alt                   = get_post_meta( $post->ID, '_wp_attachment_image_alt', true );
 		$checked               = checked( $no_alt, 1, false );
 		$form_fields['no_alt'] = array(
-			'label' => __( 'Decorative', 'mayflower' ),
+			'label' => __( 'Decorative', 'bc-douglas-fir' ),
 			'input' => 'html',
 			'value' => 1,
-			'html'  => "<input name='attachments[$post->ID][no_alt]' id='attachments-$post->ID-no_alt' value='1' type='checkbox' aria-describedby='wpa_help' $checked /> <em class='help' id='wpa_help'>" . __( '<strong>Image is purely decorative.</strong> This will strip alt text from the image, and should not be used if image contributes to page content.', 'mayflower' ) . '</em>',
+			'html'  => "<input name='attachments[$post->ID][no_alt]' id='attachments-$post->ID-no_alt' value='1' type='checkbox' aria-describedby='wpa_help' $checked /> <em class='help' id='wpa_help'>" . __( '<strong>Image is purely decorative.</strong> This will strip alt text from the image, and should not be used if image contributes to page content.', 'bc-douglas-fir' ) . '</em>',
 		);
 	}
 	return $form_fields;

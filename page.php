@@ -9,8 +9,8 @@
 
 get_header();
 ?>
-<?php if ( has_active_sidebar() ) : ?>
-	<div class="col-md-9 order-1 <?php echo 'sidebar-content' === mayflower_get_option( 'default_layout' ) ? '' : 'order-md-0'; ?>">
+<?php if ( bc_douglas_fir_has_active_sidebar() ) : ?>
+	<div class="col-md-9 order-1 <?php echo 'sidebar-content' === bc_douglas_fir_get_option( 'default_layout' ) ? '' : 'order-md-0'; ?>">
 <?php else : // Full Width Container. ?>
 	<div class="col-md-12">
 <?php endif; ?>
@@ -33,7 +33,7 @@ get_header();
 		?>
 	</div>
 <?php
-if ( has_active_sidebar() ) {
+if ( bc_douglas_fir_has_active_sidebar() ) {
 	get_sidebar();
 }
 

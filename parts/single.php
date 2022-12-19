@@ -6,7 +6,7 @@
  */
 
 // Load Mayflower options into array.
-$mayflower_options = mayflower_get_options();
+$bc_douglas_fir_options = bc_douglas_fir_get_options();
 
 if ( have_posts() ) :
 	while ( have_posts() ) :
@@ -15,23 +15,23 @@ if ( have_posts() ) :
 		<h1><?php the_title(); ?></h1>
 			<?php
 			// Check if post date or author should be displayed.
-			if ( $mayflower_options['display_post_author'] || $mayflower_options['display_post_date'] ) :
+			if ( $bc_douglas_fir_options['display_post_author'] || $bc_douglas_fir_options['display_post_date'] ) :
 				?>
 			<p class="entry-date">
 				<?php
 				// Check if post date should be displayed.
-				if ( $mayflower_options['display_post_date'] ) :
+				if ( $bc_douglas_fir_options['display_post_date'] ) :
 					?>
 					<?php
-					esc_attr_e( 'Date posted: ', 'mayflower' );
+					esc_attr_e( 'Date posted: ', 'bc-douglas-fir' );
 					the_date();
 					?>
 					<?php
 					endif;
 				// Check if post author should be displayed.
-				if ( $mayflower_options['display_post_author'] ) :
+				if ( $bc_douglas_fir_options['display_post_author'] ) :
 					?>
-					&nbsp;<span class="pull-right"><?php esc_attr_e( 'Author: ', 'mayflower' ); ?><?php the_author_posts_link(); ?></span>
+					&nbsp;<span class="pull-right"><?php esc_attr_e( 'Author: ', 'bc-douglas-fir' ); ?><?php the_author_posts_link(); ?></span>
 				<?php endif; ?>
 			</p>
 			<?php endif; ?>
@@ -87,7 +87,7 @@ if ( have_posts() ) :
 			<div class="clearfix"></div>
 			<p id="modified-date" class="text-right"><small>
 			<?php
-			esc_attr_e( 'Last Updated ', 'mayflower' );
+			esc_attr_e( 'Last Updated ', 'bc-douglas-fir' );
 			the_modified_date();
 			?>
 			</small></p>

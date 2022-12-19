@@ -14,7 +14,7 @@
 	<?php } elseif ( is_author() ) { ?>
 		<?php
 		$author = get_userdata( get_query_var( 'author' ) );
-			esc_attr_e( 'Posts by ', 'mayflower' );
+			esc_attr_e( 'Posts by ', 'bc-douglas-fir' );
 			echo esc_attr( $author->display_name );
 		?>
 	<?php } elseif ( is_day() ) { ?>
@@ -36,7 +36,7 @@ if ( have_posts() ) :
 	<?php endwhile; ?>
 	<?php wp_reset_postdata(); ?>
 
-	<?php mayflower_pagination(); ?>
+	<?php bc_douglas_fir_pagination(); ?>
 <?php else :
 	get_template_part( 'parts/content', 'none' );
 endif; ?>

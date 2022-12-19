@@ -5,7 +5,7 @@
  * @package Mayflower
  */
 
-$mayflower_options = mayflower_get_options();
+$bc_douglas_fir_options = bc_douglas_fir_get_options();
 
 if ( have_posts() ) :
 	while ( have_posts() ) :
@@ -25,7 +25,7 @@ if ( have_posts() ) :
 		/**
 		 * Check if posts are displayed on static homepage
 		 */
-		if ( true === $mayflower_options['blog_homepage_toggle'] ) :
+		if ( true === $bc_douglas_fir_options['blog_homepage_toggle'] ) :
 			?>
 		<div id="static-homepage-posts">
 
@@ -35,7 +35,7 @@ if ( have_posts() ) :
 					'post_type'      => 'post',
 					'order_by'       => 'date',
 					'order'          => 'DESC',
-					'posts_per_page' => $mayflower_options['blog_number_posts'],
+					'posts_per_page' => $bc_douglas_fir_options['blog_number_posts'],
 					'post_status'    => 'publish',
 				);
 

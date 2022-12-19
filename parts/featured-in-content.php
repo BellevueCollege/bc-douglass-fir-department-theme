@@ -6,8 +6,8 @@
  */
 
 if ( is_front_page() ) :
-	$mayflower_options = mayflower_get_options();
-	if ( true === $mayflower_options['slider_toggle'] ) : ?>
+	$bc_douglas_fir_options = bc_douglas_fir_get_options();
+	if ( true === $bc_douglas_fir_options['slider_toggle'] ) : ?>
 
 
 		<div id="carousel-featured-in-content" class="carousel slide">
@@ -18,7 +18,7 @@ if ( is_front_page() ) :
 			$the_query = new WP_Query(
 				array(
 					'post_type'      => 'slider',
-					'posts_per_page' => ( $mayflower_options['slider_number_slides'] ),
+					'posts_per_page' => ( $bc_douglas_fir_options['slider_number_slides'] ),
 				)
 			);
 			while ( $the_query->have_posts() ) :
@@ -40,7 +40,7 @@ if ( is_front_page() ) :
 						'post_type'      => 'slider',
 						'orderby'        => 'menu_order',
 						'order'          => 'ASC',
-						'posts_per_page' => $mayflower_options['slider_number_slides'],
+						'posts_per_page' => $bc_douglas_fir_options['slider_number_slides'],
 					)
 				);
 				while ( $the_query->have_posts() ) :
@@ -60,12 +60,12 @@ if ( is_front_page() ) :
 						<?php } //end else ?>
 						<?php
 						// should we show title & excerpt?
-						$mayflower_options = mayflower_get_options();
-						if ( true === $mayflower_options['slider_title'] || true === $mayflower_options['slider_excerpt'] ) {
+						$bc_douglas_fir_options = bc_douglas_fir_get_options();
+						if ( true === $bc_douglas_fir_options['slider_title'] || true === $bc_douglas_fir_options['slider_excerpt'] ) {
 							?>
 							<div class="carousel-caption d-block">
 								<?php
-								if ( true === $mayflower_options['slider_title'] ) {
+								if ( true === $bc_douglas_fir_options['slider_title'] ) {
 									// If a post class has input, sanitize it and add it to the post class array.
 									if ( ! empty( $slider_ext_url ) ) {
 										?>
@@ -78,7 +78,7 @@ if ( is_front_page() ) :
 									echo '<!-- No Title -->';
 								}
 								?>
-								<?php if ( true === $mayflower_options['slider_excerpt'] ) { ?>
+								<?php if ( true === $bc_douglas_fir_options['slider_excerpt'] ) { ?>
 									<?php the_excerpt(); ?>
 									<?php
 								} else {

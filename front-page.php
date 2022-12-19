@@ -15,13 +15,13 @@ get_header(); ?>
  *
  * Load if selected, or if there is no sidebar.
  */
-if ( ! ( has_active_sidebar() ) ||
-	( 'featured-full' === $mayflower_options['slider_layout'] &&
-	'true' == $mayflower_options['slider_toggle'] ) ) { ?>
+if ( ! ( bc_douglas_fir_has_active_sidebar() ) ||
+	( 'featured-full' === $bc_douglas_fir_options['slider_layout'] &&
+	'true' == $bc_douglas_fir_options['slider_toggle'] ) ) { ?>
 	<div class="col-12 order-2 order-md-0 carousel-col p-0"><?php get_template_part( 'parts/featured-full' ); ?></div>
 <?php } ?>
-	<?php if ( has_active_sidebar() ) : ?>
-		<div class="col-md-9 order-3 <?php echo 'sidebar-content' === mayflower_get_option( 'default_layout' ) ? '' : 'order-md-0'; ?>">
+	<?php if ( bc_douglas_fir_has_active_sidebar() ) : ?>
+		<div class="col-md-9 order-3 <?php echo 'sidebar-content' === bc_douglas_fir_get_option( 'default_layout' ) ? '' : 'order-md-0'; ?>">
 	<?php else : // Full Width Container. ?>
 		<div class="col-md-12 order-3">
 	<?php endif; ?>
@@ -30,9 +30,9 @@ if ( ! ( has_active_sidebar() ) ||
 				/**
 				 * Load Featured Slideshow in Content
 				 */
-				if ( has_active_sidebar() &&
-					'true' == $mayflower_options['slider_toggle'] &&
-					'featured-in-content' === $mayflower_options['slider_layout'] ) {
+				if ( bc_douglas_fir_has_active_sidebar() &&
+					'true' == $bc_douglas_fir_options['slider_toggle'] &&
+					'featured-in-content' === $bc_douglas_fir_options['slider_layout'] ) {
 					get_template_part( 'parts/featured-in-content' );
 					?>
 					<?php
@@ -65,7 +65,7 @@ if ( ! ( has_active_sidebar() ) ||
 			</main>
 
 	</div>
-	<?php if ( has_active_sidebar() ) : ?>
+	<?php if ( bc_douglas_fir_has_active_sidebar() ) : ?>
 		<?php
 		get_sidebar();
 	endif;

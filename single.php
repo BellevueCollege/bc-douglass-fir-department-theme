@@ -13,11 +13,11 @@ get_header(); ?>
  * Load Variables
  */
 global $mayflower_brand;
-$mayflower_options = mayflower_get_options();
-$current_layout    = $mayflower_options['default_layout'];
+$bc_douglas_fir_options = bc_douglas_fir_get_options();
+$current_layout    = $bc_douglas_fir_options['default_layout'];
 ?>
 
-<?php if ( has_active_sidebar() ) : ?>
+<?php if ( bc_douglas_fir_has_active_sidebar() ) : ?>
 			<div class="col-md-9 order-1
 			<?php
 			if ( 'sidebar-content' !== $current_layout ) {
@@ -42,7 +42,7 @@ $current_layout    = $mayflower_options['default_layout'];
 		}
 		?>
 	</div>
-<?php if ( has_active_sidebar() ) : ?>
+<?php if ( bc_douglas_fir_has_active_sidebar() ) : ?>
 	<?php
 	get_sidebar();
 endif;

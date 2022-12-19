@@ -24,7 +24,7 @@ if ( $loop->have_posts() ) :
 
 	<?php wp_reset_postdata(); ?>
 
-	<?php mayflower_pagination(); ?>
+	<?php bc_douglas_fir_pagination(); ?>
 
 <?php else : ?>
 	<?php

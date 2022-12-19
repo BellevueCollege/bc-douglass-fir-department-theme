@@ -203,13 +203,13 @@ class Globals {
 	 * Analytics
 	 */
 	public function analytics() {
-		$ga_code = $this->html_filepath . ( 'lite' === mayflower_get_option( 'mayflower_brand' ) ? $this->galite_filename : $this->gabranded_filename );
+		$ga_code = $this->html_filepath . ( 'lite' === bc_douglas_fir_get_option( 'mayflower_brand' ) ? $this->galite_filename : $this->gabranded_filename );
 
 		include_once $ga_code;
 
-		if ( mayflower_get_option( 'ga_code' ) ) :
+		if ( bc_douglas_fir_get_option( 'ga_code' ) ) :
 
-			if ( substr( mayflower_get_option('ga_code'), 0, 3 ) === 'UA-' ) :
+			if ( substr( bc_douglas_fir_get_option('ga_code'), 0, 3 ) === 'UA-' ) :
 				// Format reference https://developers.google.com/analytics/devguides/collection/gajs/?hl=nl&csw=1#MultipleCommands.
 
 				?><script type="text/javascript">
@@ -219,19 +219,19 @@ class Globals {
 					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 					})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 					/*Site-Specific GA code*/
-					ga('create','<?php echo esc_attr( mayflower_get_option('ga_code') ); ?>','bellevuecollege.edu',{'name':'singlesite'});
+					ga('create','<?php echo esc_attr( bc_douglas_fir_get_option('ga_code') ); ?>','bellevuecollege.edu',{'name':'singlesite'});
 					ga('singlesite.send','pageview');
 				</script>
 				<?php
-			elseif ( substr( mayflower_get_option('ga_code'), 0, 2 ) === 'U-' || substr( mayflower_get_option('ga_code'), 0, 2 ) === 'G-' ) :
+			elseif ( substr( bc_douglas_fir_get_option('ga_code'), 0, 2 ) === 'U-' || substr( bc_douglas_fir_get_option('ga_code'), 0, 2 ) === 'G-' ) :
 				?><!-- Global site tag (gtag.js) - Google Analytics -->
-				<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr( mayflower_get_option('ga_code') ); ?>"></script>
+				<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr( bc_douglas_fir_get_option('ga_code') ); ?>"></script>
 				<script>
 				  window.dataLayer = window.dataLayer || [];
 				  function gtag(){dataLayer.push(arguments);}
 				  gtag('js', new Date());
 
-				  gtag('config', '<?php echo esc_attr( mayflower_get_option('ga_code') ); ?>');
+				  gtag('config', '<?php echo esc_attr( bc_douglas_fir_get_option('ga_code') ); ?>');
 				</script>
 				<?php
 			endif;

@@ -304,47 +304,47 @@ function mayflower_setup() {
 		'editor-color-palette',
 		array(
 			array(
-				'name'  => __( 'White', 'mayflower' ),
+				'name'  => __( 'White', 'bc-douglas-fir' ),
 				'slug'  => 'white',
 				'color' => '#fff',
 			),
 			array(
-				'name'  => __( 'Black', 'mayflower' ),
+				'name'  => __( 'Black', 'bc-douglas-fir' ),
 				'slug'  => 'black',
 				'color' => '#000',
 			),
 			array(
-				'name'  => __( 'BC Blue', 'mayflower' ),
+				'name'  => __( 'BC Blue', 'bc-douglas-fir' ),
 				'slug'  => 'bc-blue',
 				'color' => '#003D79',
 			),
 			array(
-				'name'  => __( 'BC Silver', 'mayflower' ),
+				'name'  => __( 'BC Silver', 'bc-douglas-fir' ),
 				'slug'  => 'bc-silver',
 				'color' => '#A7A9AC',
 			),
 			array(
-				'name'  => __( 'BC Red', 'mayflower' ),
+				'name'  => __( 'BC Red', 'bc-douglas-fir' ),
 				'slug'  => 'bc-red',
 				'color' => '#C4122F',
 			),
 			array(
-				'name'  => __( 'BC Green', 'mayflower' ),
+				'name'  => __( 'BC Green', 'bc-douglas-fir' ),
 				'slug'  => 'bc-green',
 				'color' => '#AAB720',
 			),
 			array(
-				'name'  => __( 'BC Dark Blue', 'mayflower' ),
+				'name'  => __( 'BC Dark Blue', 'bc-douglas-fir' ),
 				'slug'  => 'bc-dark-blue',
 				'color' => '#162F57',
 			),
 			array(
-				'name'  => __( 'BC Orange', 'mayflower' ),
+				'name'  => __( 'BC Orange', 'bc-douglas-fir' ),
 				'slug'  => 'bc-orange',
 				'color' => '#E36F1E',
 			),
 			array(
-				'name'  => __( 'BC Gold', 'mayflower' ),
+				'name'  => __( 'BC Gold', 'bc-douglas-fir' ),
 				'slug'  => 'bc-gold',
 				'color' => '#F2C01E',
 			),
@@ -363,8 +363,8 @@ function mayflower_setup() {
 		'editor-font-sizes',
 		array(
 			array(
-				'name'      => __( 'regular', 'mayflower' ),
-				'shortName' => __( 'Standard', 'mayflower' ),
+				'name'      => __( 'regular', 'bc-douglas-fir' ),
+				'shortName' => __( 'Standard', 'bc-douglas-fir' ),
 				'size'      => 16,
 				'slug'      => 'regular',
 			),

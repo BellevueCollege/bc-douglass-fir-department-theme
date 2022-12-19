@@ -31,6 +31,6 @@ if ( have_posts() ) :
 
 <?php
 // Ensure Mayflower Options are available to loaded file.
-$mayflower_options = mayflower_get_options();
+$bc_douglas_fir_options = bc_douglas_fir_get_options();
 ?>
 <?php require get_template_directory() . '/inc/mayflower-staff/output.php'; ?>

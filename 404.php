@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  * @since Twenty Twelve 1.0
  */
 

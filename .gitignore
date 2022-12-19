@@ -38,5 +38,5 @@ test/out-fixtures/*
 test/watch-*.txt
 gulp.1
 
-# Composer stuff - composer is not currently used within Mayflower, so this ignores ALL composer files
+# Composer stuff - composer is not currently used within BC Douglas Fir Theme, so this ignores ALL composer files
 vendor

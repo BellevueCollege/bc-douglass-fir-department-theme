@@ -139,43 +139,43 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 	 * Create panels and sections
 	 */
 	$wp_customize->add_panel(
-		'mayflower',
+		'bc-douglas-fir',
 		array(
 			'title'       => __( 'Mayflower Theme' ),
-			'description' => __( "<p>These settings center around the Bellevue College 'Mayflower' theme.</p>", 'mayflower' ),
+			'description' => __( "<p>These settings center around the Bellevue College 'Mayflower' theme.</p>", 'bc-douglas-fir' ),
 			'priority'    => 160, // Mixed with top-level-section hierarchy.
 		)
 	);
 	$wp_customize->add_section(
 		'mayflower_home',
 		array(
-			'title'    => __( 'Home Page Settings', 'mayflower' ),
-			'panel'    => 'mayflower',
+			'title'    => __( 'Home Page Settings', 'bc-douglas-fir' ),
+			'panel'    => 'bc-douglas-fir',
 			'priority' => 31,
 		)
 	);
 	$wp_customize->add_section(
 		'mayflower_general',
 		array(
-			'title'    => __( 'General Settings', 'mayflower' ),
-			'panel'    => 'mayflower',
+			'title'    => __( 'General Settings', 'bc-douglas-fir' ),
+			'panel'    => 'bc-douglas-fir',
 			'priority' => 30,
 		)
 	);
 	$wp_customize->add_section(
 		'mayflower_social',
 		array(
-			'title'       => __( 'Social Media Settings', 'mayflower' ),
-			'panel'       => 'mayflower',
-			'description' => __( 'To display icons for social media sites, paste in URLs to your page on each platform in the spaces provided. If you leave one empty, it will not display. <strong>Only applies to Mayflower Lite branding.</strong>', 'mayflower' ),
+			'title'       => __( 'Social Media Settings', 'bc-douglas-fir' ),
+			'panel'       => 'bc-douglas-fir',
+			'description' => __( 'To display icons for social media sites, paste in URLs to your page on each platform in the spaces provided. If you leave one empty, it will not display. <strong>Only applies to Mayflower Lite branding.</strong>', 'bc-douglas-fir' ),
 			'priority'    => 32,
 		)
 	);
 	$wp_customize->add_section(
 		'mayflower_admin_options',
 		array(
-			'title'      => __( 'Administrator Only ', 'mayflower' ),
-			'panel'      => 'mayflower',
+			'title'      => __( 'Administrator Only ', 'bc-douglas-fir' ),
+			'panel'      => 'bc-douglas-fir',
 			'capability' => 'unfiltered_html', // Limit this section to Super-Admin only.
 			'priority'   => 33,
 		)
@@ -307,14 +307,14 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'mayflower_brand',
 			array(
-				'label'       => __( 'Mayflower Branding', 'mayflower' ),
-				'description' => __( 'Which branding of Mayflower Theme should be used for this site?', 'mayflower' ),
+				'label'       => __( 'Mayflower Branding', 'bc-douglas-fir' ),
+				'description' => __( 'Which branding of Mayflower Theme should be used for this site?', 'bc-douglas-fir' ),
 				'section'     => 'mayflower_general',
 				'settings'    => 'theme_mayflower_options[mayflower_brand]',
 				'type'        => 'radio',
 				'choices'     => array(
-					'branded' => __( 'Branded: Main college branding', 'mayflower' ),
-					'lite'    => __( 'Lite - Department branding', 'mayflower' ),
+					'branded' => __( 'Branded: Main college branding', 'bc-douglas-fir' ),
+					'lite'    => __( 'Lite - Department branding', 'bc-douglas-fir' ),
 				),
 			)
 		)
@@ -324,20 +324,20 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'global_nav_selection',
 			array(
-				'label'       => __( 'Global Nav Selection', 'mayflower' ),
-				'description' => __( 'If <strong>branded</strong>, select which website area this site appears under', 'mayflower' ),
+				'label'       => __( 'Global Nav Selection', 'bc-douglas-fir' ),
+				'description' => __( 'If <strong>branded</strong>, select which website area this site appears under', 'bc-douglas-fir' ),
 				'section'     => 'mayflower_general',
 				'settings'    => 'theme_mayflower_options[global_nav_selection]',
 				'type'        => 'select',
 				'choices'     => array(
-					'nav-none'       => __( 'none', 'mayflower' ),
-					'nav-home'       => __( 'Home', 'mayflower' ),
-					'nav-classes'    => __( 'Classes', 'mayflower' ),
-					'nav-programs'   => __( 'Programs of Study', 'mayflower' ),
-					'nav-enrollment' => __( 'Enrollment', 'mayflower' ),
-					'nav-services'   => __( 'Services', 'mayflower' ),
-					'nav-campuslife' => __( 'Campus Life', 'mayflower' ),
-					'nav-about'      => __( 'About Us', 'mayflower' ),
+					'nav-none'       => __( 'none', 'bc-douglas-fir' ),
+					'nav-home'       => __( 'Home', 'bc-douglas-fir' ),
+					'nav-classes'    => __( 'Classes', 'bc-douglas-fir' ),
+					'nav-programs'   => __( 'Programs of Study', 'bc-douglas-fir' ),
+					'nav-enrollment' => __( 'Enrollment', 'bc-douglas-fir' ),
+					'nav-services'   => __( 'Services', 'bc-douglas-fir' ),
+					'nav-campuslife' => __( 'Campus Life', 'bc-douglas-fir' ),
+					'nav-about'      => __( 'About Us', 'bc-douglas-fir' ),
 				),
 			)
 		)
@@ -347,8 +347,8 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'ga_code',
 			array(
-				'label'       => __( 'Google Analytics Tracking ID', 'mayflower' ),
-				'description' => __( 'Should start with UA-[...]', 'mayflower' ),
+				'label'       => __( 'Google Analytics Tracking ID', 'bc-douglas-fir' ),
+				'description' => __( 'Should start with UA-[...]', 'bc-douglas-fir' ),
 				'section'     => 'mayflower_general',
 				'settings'    => 'theme_mayflower_options[ga_code]',
 				'type'        => 'text',
@@ -360,13 +360,13 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'default_layout',
 			array(
-				'label'    => __( 'Site Layout', 'mayflower' ),
+				'label'    => __( 'Site Layout', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[default_layout]',
 				'type'     => 'radio',
 				'choices'  => array(
-					'sidebar-content' => __( 'Sidebar left, Content right', 'mayflower' ),
-					'content-sidebar' => __( 'Sidebar right, Content left', 'mayflower' ),
+					'sidebar-content' => __( 'Sidebar left, Content right', 'bc-douglas-fir' ),
+					'content-sidebar' => __( 'Sidebar right, Content left', 'bc-douglas-fir' ),
 				),
 			)
 		)
@@ -377,7 +377,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			'mayflower_staff-heading',
 			array(
 				'section' => 'mayflower_general',
-				'label'   => __( 'Staff Section', 'mayflower' ),
+				'label'   => __( 'Staff Section', 'bc-douglas-fir' ),
 				'type'    => 'heading',
 			)
 		)
@@ -388,7 +388,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			'mayflower_staff-desc',
 			array(
 				'section'     => 'mayflower_general',
-				'description' => __( 'Turn on a new Staff area of the dashboard to enter employee listings', 'mayflower' ),
+				'description' => __( 'Turn on a new Staff area of the dashboard to enter employee listings', 'bc-douglas-fir' ),
 				'type'        => 'text',
 			)
 		)
@@ -398,7 +398,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'staff_toggle',
 			array(
-				'label'    => __( 'Turn on Staff feature?', 'mayflower' ),
+				'label'    => __( 'Turn on Staff feature?', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[staff_toggle]',
 				'type'     => 'checkbox',
@@ -410,13 +410,13 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'staff_layout',
 			array(
-				'label'    => __( 'Staff Layout', 'mayflower' ),
+				'label'    => __( 'Staff Layout', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[staff_layout]',
 				'type'     => 'radio',
 				'choices'  => array(
-					'list-view' => __( 'List View', 'mayflower' ),
-					'grid-view' => __( 'Grid View', 'mayflower' ),
+					'list-view' => __( 'List View', 'bc-douglas-fir' ),
+					'grid-view' => __( 'Grid View', 'bc-douglas-fir' ),
 				),
 			)
 		)
@@ -427,7 +427,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			'mayflower_staff-info-all-heading',
 			array(
 				'section' => 'mayflower_general',
-				'label'   => __( 'Staff Information', 'mayflower' ),
+				'label'   => __( 'Staff Information', 'bc-douglas-fir' ),
 				'type'    => 'heading',
 			)
 		)
@@ -437,7 +437,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'staff_picture_toggle',
 			array(
-				'label'    => __( 'List Staff Picture', 'mayflower' ),
+				'label'    => __( 'List Staff Picture', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[staff_picture_toggle]',
 				'type'     => 'checkbox',
@@ -449,7 +449,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'staff_more_toggle',
 			array(
-				'label'    => __( 'List Staff "More About" Link', 'mayflower' ),
+				'label'    => __( 'List Staff "More About" Link', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[staff_more_toggle]',
 				'type'     => 'checkbox',
@@ -462,7 +462,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			'mayflower_staff-info-list-heading',
 			array(
 				'section' => 'mayflower_general',
-				'label'   => __( 'Staff Information - List View Layout Only', 'mayflower' ),
+				'label'   => __( 'Staff Information - List View Layout Only', 'bc-douglas-fir' ),
 				'type'    => 'heading',
 			)
 		)
@@ -472,7 +472,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'staff_phone_toggle',
 			array(
-				'label'    => __( 'List Staff Phone Number', 'mayflower' ),
+				'label'    => __( 'List Staff Phone Number', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[staff_phone_toggle]',
 				'type'     => 'checkbox',
@@ -484,7 +484,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'staff_location_toggle',
 			array(
-				'label'    => __( 'List Staff Office Location', 'mayflower' ),
+				'label'    => __( 'List Staff Office Location', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[staff_location_toggle]',
 				'type'     => 'checkbox',
@@ -496,7 +496,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'staff_hours_toggle',
 			array(
-				'label'    => __( 'List Staff Office Hours', 'mayflower' ),
+				'label'    => __( 'List Staff Office Hours', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[staff_hours_toggle]',
 				'type'     => 'checkbox',
@@ -508,7 +508,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'staff_bio_toggle',
 			array(
-				'label'    => __( 'List Staff Biography', 'mayflower' ),
+				'label'    => __( 'List Staff Biography', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[staff_bio_toggle]',
 				'type'     => 'checkbox',
@@ -521,7 +521,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			'mayflower_post-heading',
 			array(
 				'section' => 'mayflower_general',
-				'label'   => __( 'Post Display Settings', 'mayflower' ),
+				'label'   => __( 'Post Display Settings', 'bc-douglas-fir' ),
 				'type'    => 'heading',
 			)
 		)
@@ -531,7 +531,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'display_post_date',
 			array(
-				'label'    => __( 'Display Date on Posts', 'mayflower' ),
+				'label'    => __( 'Display Date on Posts', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[display_post_date]',
 				'type'     => 'checkbox',
@@ -543,7 +543,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'display_post_author',
 			array(
-				'label'    => __( 'Display Author on Posts', 'mayflower' ),
+				'label'    => __( 'Display Author on Posts', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_general',
 				'settings' => 'theme_mayflower_options[display_post_author]',
 				'type'     => 'checkbox',
@@ -624,7 +624,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			'mayflower_slider-heading',
 			array(
 				'section'         => 'mayflower_home',
-				'label'           => __( 'Home Page Slider', 'mayflower' ),
+				'label'           => __( 'Home Page Slider', 'bc-douglas-fir' ),
 				'type'            => 'heading',
 				'active_callback' => 'is_front_page',
 			)
@@ -635,7 +635,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'slider_toggle',
 			array(
-				'label'           => __( 'Enable Home Page Slider feature?', 'mayflower' ),
+				'label'           => __( 'Enable Home Page Slider feature?', 'bc-douglas-fir' ),
 				'section'         => 'mayflower_home',
 				'settings'        => 'theme_mayflower_options[slider_toggle]',
 				'type'            => 'checkbox',
@@ -648,14 +648,14 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'slider_layout',
 			array(
-				'label'           => __( 'Slider Layout', 'mayflower' ),
+				'label'           => __( 'Slider Layout', 'bc-douglas-fir' ),
 				'section'         => 'mayflower_home',
 				'settings'        => 'theme_mayflower_options[slider_layout]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'radio',
 				'choices'         => array(
-					'featured-full'       => __( '100% width, featured above content', 'mayflower' ),
-					'featured-in-content' => __( 'Featured inside content area', 'mayflower' ),
+					'featured-full'       => __( '100% width, featured above content', 'bc-douglas-fir' ),
+					'featured-in-content' => __( 'Featured inside content area', 'bc-douglas-fir' ),
 				),
 			)
 		)
@@ -665,25 +665,25 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'slider_number_slides',
 			array(
-				'label'           => __( 'How many slides should we show?', 'mayflower' ),
+				'label'           => __( 'How many slides should we show?', 'bc-douglas-fir' ),
 				'section'         => 'mayflower_home',
 				'settings'        => 'theme_mayflower_options[slider_number_slides]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'select',
 				'choices'         => array(
-					'1'  => __( '1', 'mayflower' ),
-					'2'  => __( '2', 'mayflower' ),
-					'3'  => __( '3', 'mayflower' ),
-					'4'  => __( '4', 'mayflower' ),
-					'5'  => __( '5', 'mayflower' ),
-					'6'  => __( '6', 'mayflower' ),
-					'7'  => __( '7', 'mayflower' ),
-					'8'  => __( '8', 'mayflower' ),
-					'9'  => __( '9', 'mayflower' ),
-					'10' => __( '10', 'mayflower' ),
-					'11' => __( '11', 'mayflower' ),
-					'12' => __( '12', 'mayflower' ),
-					'13' => __( '13', 'mayflower' ),
+					'1'  => __( '1', 'bc-douglas-fir' ),
+					'2'  => __( '2', 'bc-douglas-fir' ),
+					'3'  => __( '3', 'bc-douglas-fir' ),
+					'4'  => __( '4', 'bc-douglas-fir' ),
+					'5'  => __( '5', 'bc-douglas-fir' ),
+					'6'  => __( '6', 'bc-douglas-fir' ),
+					'7'  => __( '7', 'bc-douglas-fir' ),
+					'8'  => __( '8', 'bc-douglas-fir' ),
+					'9'  => __( '9', 'bc-douglas-fir' ),
+					'10' => __( '10', 'bc-douglas-fir' ),
+					'11' => __( '11', 'bc-douglas-fir' ),
+					'12' => __( '12', 'bc-douglas-fir' ),
+					'13' => __( '13', 'bc-douglas-fir' ),
 				),
 			)
 		)
@@ -693,7 +693,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'slider_title',
 			array(
-				'label'           => __( 'Show slider title?', 'mayflower' ),
+				'label'           => __( 'Show slider title?', 'bc-douglas-fir' ),
 				'section'         => 'mayflower_home',
 				'settings'        => 'theme_mayflower_options[slider_title]',
 				'active_callback' => 'is_front_page',
@@ -706,7 +706,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'slider_excerpt',
 			array(
-				'label'           => __( 'Show slider excerpt?', 'mayflower' ),
+				'label'           => __( 'Show slider excerpt?', 'bc-douglas-fir' ),
 				'section'         => 'mayflower_home',
 				'settings'        => 'theme_mayflower_options[slider_excerpt]',
 				'active_callback' => 'is_front_page',
@@ -724,13 +724,13 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'slider_order',
 			array(
-				'label'          => __( 'Slide Order', 'mayflower' ),
+				'label'          => __( 'Slide Order', 'bc-douglas-fir' ),
 				'section'        => 'mayflower_home',
 				'settings'       => 'theme_mayflower_options[slider_order]',
 				'type'           => 'radio',
 				'choices'        => array(
-					'menu_order'       => __( 'Sort Order (as set)', 'mayflower' ),
-					'rand' => __( 'Randomized', 'mayflower' ),
+					'menu_order'       => __( 'Sort Order (as set)', 'bc-douglas-fir' ),
+					'rand' => __( 'Randomized', 'bc-douglas-fir' ),
 				)
 			)
 		)
@@ -754,7 +754,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			'mayflower_blog-heading',
 			array(
 				'section'         => 'mayflower_home',
-				'label'           => __( 'Blog Posts on Home Page', 'mayflower' ),
+				'label'           => __( 'Blog Posts on Home Page', 'bc-douglas-fir' ),
 				'active_callback' => 'is_front_page',
 				'type'            => 'heading',
 			)
@@ -765,8 +765,8 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'blog_homepage_toggle',
 			array(
-				'label'           => __( 'Enable blog posts on home page?', 'mayflower' ),
-				'description'     => __( 'Show recent blog posts below home page content. Only applies if homepage is set to a static page.', 'mayflower' ),
+				'label'           => __( 'Enable blog posts on home page?', 'bc-douglas-fir' ),
+				'description'     => __( 'Show recent blog posts below home page content. Only applies if homepage is set to a static page.', 'bc-douglas-fir' ),
 				'section'         => 'mayflower_home',
 				'settings'        => 'theme_mayflower_options[blog_homepage_toggle]',
 				'active_callback' => 'is_front_page',
@@ -779,23 +779,23 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'blog_number_posts',
 			array(
-				'label'           => __( 'Number of blog posts', 'mayflower' ),
-				'description'     => __( 'How many blog posts should display below page content?', 'mayflower' ),
+				'label'           => __( 'Number of blog posts', 'bc-douglas-fir' ),
+				'description'     => __( 'How many blog posts should display below page content?', 'bc-douglas-fir' ),
 				'section'         => 'mayflower_home',
 				'settings'        => 'theme_mayflower_options[blog_number_posts]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'select',
 				'choices'         => array(
-					'1'  => __( '1', 'mayflower' ),
-					'2'  => __( '2', 'mayflower' ),
-					'3'  => __( '3', 'mayflower' ),
-					'4'  => __( '4', 'mayflower' ),
-					'5'  => __( '5', 'mayflower' ),
-					'6'  => __( '6', 'mayflower' ),
-					'7'  => __( '7', 'mayflower' ),
-					'8'  => __( '8', 'mayflower' ),
-					'9'  => __( '9', 'mayflower' ),
-					'10' => __( '10', 'mayflower' ),
+					'1'  => __( '1', 'bc-douglas-fir' ),
+					'2'  => __( '2', 'bc-douglas-fir' ),
+					'3'  => __( '3', 'bc-douglas-fir' ),
+					'4'  => __( '4', 'bc-douglas-fir' ),
+					'5'  => __( '5', 'bc-douglas-fir' ),
+					'6'  => __( '6', 'bc-douglas-fir' ),
+					'7'  => __( '7', 'bc-douglas-fir' ),
+					'8'  => __( '8', 'bc-douglas-fir' ),
+					'9'  => __( '9', 'bc-douglas-fir' ),
+					'10' => __( '10', 'bc-douglas-fir' ),
 				),
 			)
 		)
@@ -849,7 +849,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'facebook',
 			array(
-				'label'    => __( 'Facebook', 'mayflower' ),
+				'label'    => __( 'Facebook', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_social',
 				'settings' => 'theme_mayflower_options[facebook]',
 				'type'     => 'text',
@@ -861,7 +861,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'twitter',
 			array(
-				'label'    => __( 'Twitter', 'mayflower' ),
+				'label'    => __( 'Twitter', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_social',
 				'settings' => 'theme_mayflower_options[twitter]',
 				'type'     => 'text',
@@ -873,7 +873,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'linkedin',
 			array(
-				'label'    => __( 'LinkedIn', 'mayflower' ),
+				'label'    => __( 'LinkedIn', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_social',
 				'settings' => 'theme_mayflower_options[linkedin]',
 				'type'     => 'text',
@@ -885,7 +885,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'youtube',
 			array(
-				'label'    => __( 'YouTube', 'mayflower' ),
+				'label'    => __( 'YouTube', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_social',
 				'settings' => 'theme_mayflower_options[youtube]',
 				'type'     => 'text',
@@ -897,7 +897,7 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'instagram',
 			array(
-				'label'    => __( 'Instagram', 'mayflower' ),
+				'label'    => __( 'Instagram', 'bc-douglas-fir' ),
 				'section'  => 'mayflower_social',
 				'settings' => 'theme_mayflower_options[instagram]',
 				'type'     => 'text',
@@ -963,8 +963,8 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'hide_searchform',
 			array(
-				'label'       => __( 'Hide Search Form', 'mayflower' ),
-				'description' => __( 'Hide Search in Mayflower Lite', 'mayflower' ),
+				'label'       => __( 'Hide Search Form', 'bc-douglas-fir' ),
+				'description' => __( 'Hide Search in Mayflower Lite', 'bc-douglas-fir' ),
 				'section'     => 'mayflower_admin_options',
 				'settings'    => 'theme_mayflower_options[hide_searchform]',
 				'type'        => 'checkbox',
@@ -976,8 +976,8 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'limit_searchform_scope',
 			array(
-				'label'       => __( 'Limit Search Form Scope', 'mayflower' ),
-				'description' => __( 'Limit search results to pages within the subsite', 'mayflower' ),
+				'label'       => __( 'Limit Search Form Scope', 'bc-douglas-fir' ),
+				'description' => __( 'Limit search results to pages within the subsite', 'bc-douglas-fir' ),
 				'section'     => 'mayflower_admin_options',
 				'settings'    => 'theme_mayflower_options[limit_searchform_scope]',
 				'type'        => 'checkbox',
@@ -989,8 +989,8 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'custom_search_scope',
 			array(
-				'label'       => __( 'Custom Search Scope', 'mayflower' ),
-				'description' => __( 'Use a custom search scope instead the current site. Comma separated list of URL or URL parts.', 'mayflower' ),
+				'label'       => __( 'Custom Search Scope', 'bc-douglas-fir' ),
+				'description' => __( 'Use a custom search scope instead the current site. Comma separated list of URL or URL parts.', 'bc-douglas-fir' ),
 				'section'     => 'mayflower_admin_options',
 				'settings'    => 'theme_mayflower_options[custom_search_scope]',
 				'type'        => 'text',
@@ -1002,8 +1002,8 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'custom_search_url',
 			array(
-				'label'       => __( 'Custom Search URL', 'mayflower' ),
-				'description' => __( 'Allows definition of a custom URL for search (instead of passing a filter)', 'mayflower' ),
+				'label'       => __( 'Custom Search URL', 'bc-douglas-fir' ),
+				'description' => __( 'Allows definition of a custom URL for search (instead of passing a filter)', 'bc-douglas-fir' ),
 				'section'     => 'mayflower_admin_options',
 				'settings'    => 'theme_mayflower_options[custom_search_url]',
 				'type'        => 'url',
@@ -1015,8 +1015,8 @@ function mayflower_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'custom_search_api_key',
 			array(
-				'label'       => __( 'Custom Search API Key', 'mayflower' ),
-				'description' => __( 'Allows definition of a custom public API key for autofill. Required if custom URL is defined. ', 'mayflower' ),
+				'label'       => __( 'Custom Search API Key', 'bc-douglas-fir' ),
+				'description' => __( 'Allows definition of a custom public API key for autofill. Required if custom URL is defined. ', 'bc-douglas-fir' ),
 				'section'     => 'mayflower_admin_options',
 				'settings'    => 'theme_mayflower_options[custom_search_api_key]',
 				'type'        => 'text',
@@ -1043,15 +1043,15 @@ add_action( 'customize_register', 'mf_remove_icon_customtizer', 20, 1 );
  *
  * Returns array of all mayflower options.
  */
-function mayflower_get_options() {
+function bc_douglas_fir_get_options() {
 	/* Globalize $mayflower_theme_option_defaults */
 	global $mayflower_theme_option_defaults;
 
 	/* Merge theme options and theme options defaults */
-	$mayflower_options = wp_parse_args( get_option( 'theme_mayflower_options', array() ), $mayflower_theme_option_defaults );
+	$bc_douglas_fir_options = wp_parse_args( get_option( 'theme_mayflower_options', array() ), $mayflower_theme_option_defaults );
 
 	/* return all values */
-	return $mayflower_options;
+	return $bc_douglas_fir_options;
 }
 
 /**
@@ -1062,8 +1062,8 @@ function mayflower_get_options() {
  * @param string $option Option name.
  * @return string Option value from Mayflower Options.
  */
-function mayflower_get_option( $option ) {
-	$mayflower_options = mayflower_get_options();
-	$option            = $mayflower_options[ $option ];
+function bc_douglas_fir_get_option( $option ) {
+	$bc_douglas_fir_options = bc_douglas_fir_get_options();
+	$option            = $bc_douglas_fir_options[ $option ];
 	return $option;
 }

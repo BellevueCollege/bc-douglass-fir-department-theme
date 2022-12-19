@@ -7,21 +7,21 @@
  * @package Mayflower
  */
 
-global $mayflower_options;
+global $bc_douglas_fir_options;
 
 // Load options if they are not already present.
-if ( ! ( is_array( $mayflower_options ) ) ) {
-	$mayflower_options = mayflower_get_options();
+if ( ! ( is_array( $bc_douglas_fir_options ) ) ) {
+	$bc_douglas_fir_options = bc_douglas_fir_get_options();
 }
 
 // Set variables for ease of use/configuration.
-$limit_searchform_scope = $mayflower_options['limit_searchform_scope'];
+$limit_searchform_scope = $bc_douglas_fir_options['limit_searchform_scope'];
 $search_url_default     = 'https://www.bellevuecollege.edu/search/';
-$search_url         = ( $limit_searchform_scope && ( '' !== $mayflower_options['custom_search_url'] ) ) ?
-								$mayflower_options['custom_search_url'] : $search_url_default;
+$search_url         = ( $limit_searchform_scope && ( '' !== $bc_douglas_fir_options['custom_search_url'] ) ) ?
+								$bc_douglas_fir_options['custom_search_url'] : $search_url_default;
 $search_field_id    = $limit_searchform_scope ? 'college-search-field-custom' : 'college-search-field';
-$filter_value       = ( '' !== $mayflower_options['custom_search_scope'] ) ? $mayflower_options['custom_search_scope'] : mayflower_trimmed_url();
-$search_api_key     = '' !== $mayflower_options['custom_search_api_key'] ? $mayflower_options['custom_search_api_key'] :
+$filter_value       = ( '' !== $bc_douglas_fir_options['custom_search_scope'] ) ? $bc_douglas_fir_options['custom_search_scope'] : bc_douglas_fir_trimmed_url();
+$search_api_key     = '' !== $bc_douglas_fir_options['custom_search_api_key'] ? $bc_douglas_fir_options['custom_search_api_key'] :
 							'YUFwdxQ6-Kaa9Zac4rpb'; // <-- Default API Key.
 $search_query_peram = 'query';
 $filter_peram       = 'scope'; // Hardcoded default.
@@ -34,7 +34,7 @@ $filter_peram       = 'scope'; // Hardcoded default.
 
 		<?php if ( $limit_searchform_scope ) : ?>
 			<?php
-			if ( '' === $mayflower_options['custom_search_url'] ) :
+			if ( '' === $bc_douglas_fir_options['custom_search_url'] ) :
 				// If there is NOT a custom search URL, output filter peram and filter js.
 				?>
 				<input type="hidden" class="college-search-filter" name="<?php echo esc_attr( $filter_peram ); ?>" value="<?php echo esc_attr( $filter_value ); ?>">

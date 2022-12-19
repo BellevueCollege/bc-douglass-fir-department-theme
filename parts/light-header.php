@@ -8,7 +8,7 @@
 $globals = new Globals();
 $globals->tophead();
 
-global $post, $mayflower_options, $mayflower_brand, $mayflower_brand_css, $mayflower_theme_version;
+global $post, $bc_douglas_fir_options, $mayflower_brand, $mayflower_brand_css, $mayflower_theme_version;
 
 ?>
 <header id="secondary-header" class="lite container shadow">
@@ -61,41 +61,41 @@ global $post, $mayflower_options, $mayflower_brand, $mayflower_brand_css, $mayfl
 												">
 			<div class="social-media
 			<?php
-			if ( empty( $mayflower_options['facebook'] ) && empty( $mayflower_options['twitter'] ) && empty( $mayflower_options['youtube'] ) && empty( $mayflower_options['instagram'] ) && empty( $mayflower_options['linkedin'] ) ) {
+			if ( empty( $bc_douglas_fir_options['facebook'] ) && empty( $bc_douglas_fir_options['twitter'] ) && empty( $bc_douglas_fir_options['youtube'] ) && empty( $bc_douglas_fir_options['instagram'] ) && empty( $bc_douglas_fir_options['linkedin'] ) ) {
 				echo 'social-media-no-margin';
 			}
 			?>
 										">
-				<?php if ( ! empty( $mayflower_options['facebook'] ) ) { ?>
-					<a class="px-2 py-1" href="<?php echo esc_url( $mayflower_options['facebook'] ); ?>" title="Facebook">
+				<?php if ( ! empty( $bc_douglas_fir_options['facebook'] ) ) { ?>
+					<a class="px-2 py-1" href="<?php echo esc_url( $bc_douglas_fir_options['facebook'] ); ?>" title="Facebook">
 						<i class="fab fa-facebook-square" aria-hidden="true"></i>
 						<span class="sr-only">Facebook</span></a>
 					</a>
 				<?php } ?>
 
-				<?php if ( ! empty( $mayflower_options['twitter'] ) ) { ?>
-					<a class="px-2 py-1" href="<?php echo esc_url( $mayflower_options['twitter'] ); ?>" title="Twitter">
+				<?php if ( ! empty( $bc_douglas_fir_options['twitter'] ) ) { ?>
+					<a class="px-2 py-1" href="<?php echo esc_url( $bc_douglas_fir_options['twitter'] ); ?>" title="Twitter">
 						<i class="fab fa-twitter-square" aria-hidden="true"></i>
 						<span class="sr-only">Twitter</span>
 					</a>
 				<?php } ?>
 
-				<?php if ( ! empty( $mayflower_options['youtube'] ) ) { ?>
-					<a class="px-2 py-1" href="<?php echo esc_url( $mayflower_options['youtube'] ); ?>" title="YouTube">
+				<?php if ( ! empty( $bc_douglas_fir_options['youtube'] ) ) { ?>
+					<a class="px-2 py-1" href="<?php echo esc_url( $bc_douglas_fir_options['youtube'] ); ?>" title="YouTube">
 						<i class="fab fa-youtube-square" aria-hidden="true"></i>
 						<span class="sr-only">YouTube</span></a>
 					</a>
 				<?php } ?>
 
-				<?php if ( ! empty( $mayflower_options['instagram'] ) ) { ?>
-					<a class="px-2 py-1" href="<?php echo esc_url( $mayflower_options['instagram'] ); ?>" title="Instagram">
+				<?php if ( ! empty( $bc_douglas_fir_options['instagram'] ) ) { ?>
+					<a class="px-2 py-1" href="<?php echo esc_url( $bc_douglas_fir_options['instagram'] ); ?>" title="Instagram">
 						<i class="fab fa-instagram" aria-hidden="true"></i>
 						<span class="sr-only">Instagram</span></a>
 					</a>
 				<?php } ?>
 
-				<?php if ( ! empty( $mayflower_options['linkedin'] ) ) { ?>
-					<a class="px-2 py-1" href="<?php echo esc_url( $mayflower_options['linkedin'] ); ?>" title="LinkedIn">
+				<?php if ( ! empty( $bc_douglas_fir_options['linkedin'] ) ) { ?>
+					<a class="px-2 py-1" href="<?php echo esc_url( $bc_douglas_fir_options['linkedin'] ); ?>" title="LinkedIn">
 						<i class="fab fa-linkedin" aria-hidden="true"></i>
 						<span class="sr-only">LinkedIn</span></a>
 					</a>
@@ -103,7 +103,7 @@ global $post, $mayflower_options, $mayflower_brand, $mayflower_brand_css, $mayfl
 			</div><!-- social-media -->
 
 			<?php
-			if ( ! ( $mayflower_options['hide_searchform'] ) ) :
+			if ( ! ( $bc_douglas_fir_options['hide_searchform'] ) ) :
 				?>
 					<div id="header-actions-bar" class="row searchform-show">
 						<div id="main-nav-link" class="col-4 col-md-12">
