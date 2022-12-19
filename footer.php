@@ -5,7 +5,6 @@
  * @package Mayflower
  */
 
-global $mayflower_brand;
 $globals = new Globals();
 ?>
 	</div><!-- row -->
@@ -13,11 +12,8 @@ $globals = new Globals();
 
 <?php
 
-if ( 'lite' === $mayflower_brand ) {
-	$globals->footer_legal();
-} else {
-	$globals->footer();
-}
+$globals->footer_legal();
+
 wp_footer();
 ?>
 

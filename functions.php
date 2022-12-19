@@ -52,11 +52,6 @@ require get_template_directory() . '/inc/functions/options-customizer.php';
 $bc_douglas_fir_options = bc_douglas_fir_get_options();
 
 /**
- * Globals Options Page Setup
- */
-require get_template_directory() . '/inc/functions/globals-options.php';
-
-/**
  * Globals Class and Functions
  */
 require get_template_directory() . '/inc/functions/globals.php';
@@ -321,13 +316,10 @@ function bc_douglas_fir_trimmed_url() {
  * Used in page templates.
  * TODO: move to function
  */
-$mayflower_brand     = bc_douglas_fir_get_option( 'mayflower_brand' );
 $mayflower_brand_css = '';
-if ( 'lite' === $mayflower_brand ) {
-	$mayflower_brand_css = 'globals-lite';
-} else {
-	$mayflower_brand_css = 'globals-branded';
-}
+
+$mayflower_brand_css = 'globals-lite';
+
 
 
 /**

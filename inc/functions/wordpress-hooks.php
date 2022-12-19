@@ -373,10 +373,6 @@ if ( ! function_exists( 'mayflower_body_class_ia' ) ) {
 	 * @param array $classes Body Classes.
 	 */
 	function mayflower_body_class_ia( $classes ) {
-		$bc_douglas_fir_options = bc_douglas_fir_get_options();
-
-		// add ia_options to classes.
-		$classes[] = $bc_douglas_fir_options['global_nav_selection'];
 
 		// return the $classes array.
 		return $classes;
@@ -652,35 +648,6 @@ function mayflower_dashboard_styles( $hook ) {
 }
 add_action( 'admin_enqueue_scripts', 'mayflower_dashboard_styles' );
 
-/**
- * Adding mayflower theme to have google analytics tracking for logged in users.
- */
-function mayflower_google_analytics_dashboard() {
-
-	if ( is_user_logged_in() ) {
-
-		$mayflower_globals_settings = get_option( 'globals_network_settings' );
-		if ( is_multisite() ) {
-			$mayflower_globals_settings = get_site_option( 'globals_network_settings' );
-		}
-
-		$globals_google_analytics_code = $mayflower_globals_settings['globals_google_analytics_code'];
-
-		if ( $globals_google_analytics_code ) {
-			?>
-			<script type="text/javascript">
-				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-				ga('create', '<?php echo esc_attr( $globals->analytics ); ?>', 'bellevuecollege.edu', {'siteSpeedSampleRate': 100});
-				ga('send', 'pageview');
-			</script>
-			<?php
-		}
-	}
-}
-add_action( 'admin_head', 'mayflower_google_analytics_dashboard' );
 
 /**
  * Add responsive classes to images

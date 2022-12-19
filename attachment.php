@@ -12,7 +12,6 @@ get_header(); ?>
 /**
  * Load Variables
  */
-global $mayflower_brand;
 $bc_douglas_fir_options = bc_douglas_fir_get_options();
 $current_layout    = $bc_douglas_fir_options['default_layout'];
 $description       = $post->post_content;

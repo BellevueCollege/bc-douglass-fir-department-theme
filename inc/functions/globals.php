@@ -106,17 +106,17 @@ class Globals {
 		/**
 		 * Load Settings Array
 		 */
-		$this->settings = is_multisite() ? get_network_option( null, 'globals_network_settings' ) : get_option( 'globals_network_settings' );
+		$this->settings = bc_douglas_fir_get_options();
 
 		/**
 		 * Globals Path (local filesystem)
 		 */
 		$this->path = (
-				! empty( $this->get_globals_option( 'globals_path' ) ) && "1" === $this->get_globals_option( 'append_path' )
+				! empty( $this->get_globals_option( 'globals_path' ) ) && ( "1" || true ) === $this->get_globals_option( 'globals_append_path' )
 			) ? $_SERVER['DOCUMENT_ROOT'] . $this->get_globals_option( 'globals_path' ) :
 			$this->get_globals_option( 'globals_path' );
 
-		$this->path = apply_filters( 'mayflower_globals_path', $this->path );
+		$this->path = apply_filters( 'bc_douglas_fir_globals_path', $this->path );
 
 		/**
 		 * Filenames
@@ -126,25 +126,21 @@ class Globals {
 		/**
 		 * Globals URL
 		 */
-		$this->url = $this->get_globals_option( 'globals_url' ) ?? '/g/3';
-		$this->url = apply_filters( 'mayflower_globals_url', $this->url );
+		$this->url = $this->get_globals_option( 'globals_url' ) ?? '/g/4';
+		$this->url = apply_filters( 'bc_douglas_fir_globals_url', $this->url );
 
 		/**
 		 * Globals Version
 		 */
 		$this->version = $this->get_globals_option( 'globals_version' );
 
-		/**
-		 * Analytics
-		 */
-		$this->analytics = $this->get_globals_option( 'globals_google_analytics_code' );
 
 		/**
 		 * Actions
 		 */
-		add_action( 'mayflower_header', array( $this, 'tophead' ) );
-		add_action( 'mayflower_header', array( $this, 'tophead_big' ) );
-		add_action( 'mayflower_footer', array( $this, 'footer' ), 50 );
+		add_action( 'bc_douglas_fir_header', array( $this, 'tophead' ) );
+		add_action( 'bc_douglas_fir_header', array( $this, 'tophead_big' ) );
+		add_action( 'bc_douglas_fir_footer', array( $this, 'footer' ), 50 );
 
 	}
 
@@ -203,7 +199,7 @@ class Globals {
 	 * Analytics
 	 */
 	public function analytics() {
-		$ga_code = $this->html_filepath . ( 'lite' === bc_douglas_fir_get_option( 'mayflower_brand' ) ? $this->galite_filename : $this->gabranded_filename );
+		$ga_code = $this->html_filepath . $this->galite_filename;
 
 		include_once $ga_code;
 
@@ -245,5 +241,6 @@ class Globals {
 	public function hook_analytics() {
 		add_action( 'wp_head', array( $this, 'analytics' ), 30 );
 	}
+
 }
 

@@ -8,7 +8,7 @@
 $globals = new Globals();
 $globals->tophead();
 
-global $post, $bc_douglas_fir_options, $mayflower_brand, $mayflower_brand_css, $mayflower_theme_version;
+global $post, $bc_douglas_fir_options, $mayflower_brand_css, $mayflower_theme_version;
 
 ?>
 <header id="secondary-header" class="lite container shadow">

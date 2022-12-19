@@ -8,7 +8,7 @@
  */
 
 /* Globally declare variables used in a variety of locations */
-global $post, $bc_douglas_fir_options, $mayflower_brand, $mayflower_brand_css, $mayflower_theme_version, $globals;
+global $post, $bc_douglas_fir_options, $mayflower_brand_css, $mayflower_theme_version, $globals;
 
 
 if ( ! ( is_array( $bc_douglas_fir_options ) ) ) {
@@ -89,39 +89,14 @@ $post_meta_data          = get_post_custom( $post->ID ?? null );
 		do_action( 'wp_body_open' );
 	}
 
+
 	/**
-	 * Branded Header
+	 * Mayflower lite header
 	 */
-	if ( 'branded' === $mayflower_brand ) :
+	get_template_part( 'parts/light-header' );
 
 
-		$globals->tophead_big();
-
-		/**
-		 * Page Title
-		 */
-		if ( ! is_404() ) : // Don't display page title on 404 page.
-			?>
-
-			<div id="site-header" class="container <?php echo esc_attr( $mayflower_brand_css ); ?>">
-				<p class="site-title">
-					<a title="Return to Home Page" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php bloginfo( 'name' ); ?>
-					</a>
-				</p>
-			</div>
-
-			<?php
-		endif;
-	else :
-
-		/**
-		 * Mayflower lite header
-		 */
-		get_template_part( 'parts/light-header' );
-
-	endif; // End if.
 	mayflower_sitewide_notice();
 	?>
-	<div id="main" class="<?php echo esc_attr( $mayflower_brand_css ); ?> container <?php echo 'lite' === $mayflower_brand ? 'shadow' : ''; ?>">
+	<div id="main" class="<?php echo esc_attr( $mayflower_brand_css ); ?> container shadow">
 		<div class="row pt-md-4"><!--endnoindex-->
