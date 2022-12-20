@@ -192,7 +192,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 	 */
 
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[ga_code]',
+		'theme_mayflower_options[ga_code]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['ga_code'],
@@ -200,7 +200,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[default_layout]',
+		'theme_mayflower_options[default_layout]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['default_layout'],
@@ -208,7 +208,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[staff_toggle]',
+		'theme_mayflower_options[staff_toggle]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['staff_toggle'],
@@ -216,7 +216,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[staff_layout]',
+		'theme_mayflower_options[staff_layout]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['staff_layout'],
@@ -224,7 +224,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[staff_picture_toggle]',
+		'theme_mayflower_options[staff_picture_toggle]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['staff_picture_toggle'],
@@ -232,7 +232,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[staff_phone_toggle]',
+		'theme_mayflower_options[staff_phone_toggle]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['staff_phone_toggle'],
@@ -240,7 +240,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[staff_location_toggle]',
+		'theme_mayflower_options[staff_location_toggle]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['staff_location_toggle'],
@@ -248,7 +248,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[staff_hours_toggle]',
+		'theme_mayflower_options[staff_hours_toggle]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['staff_hours_toggle'],
@@ -256,7 +256,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[staff_bio_toggle]',
+		'theme_mayflower_options[staff_bio_toggle]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['staff_bio_toggle'],
@@ -264,7 +264,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[staff_more_toggle]',
+		'theme_mayflower_options[staff_more_toggle]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['staff_more_toggle'],
@@ -272,7 +272,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[display_post_date]',
+		'theme_mayflower_options[display_post_date]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['display_post_date'],
@@ -280,7 +280,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[display_post_author]',
+		'theme_mayflower_options[display_post_author]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['display_post_author'],
@@ -296,7 +296,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Google Analytics Tracking ID', 'bc-douglas-fir' ),
 				'description' => __( 'Should start with UA-[...]', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_general',
-				'settings'    => 'theme_bc_douglas_fir_options[ga_code]',
+				'settings'    => 'theme_mayflower_options[ga_code]',
 				'type'        => 'text',
 			)
 		)
@@ -308,7 +308,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'Site Layout', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[default_layout]',
+				'settings' => 'theme_mayflower_options[default_layout]',
 				'type'     => 'radio',
 				'choices'  => array(
 					'sidebar-content' => __( 'Sidebar left, Content right', 'bc-douglas-fir' ),
@@ -346,7 +346,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'Turn on Staff feature?', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[staff_toggle]',
+				'settings' => 'theme_mayflower_options[staff_toggle]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -358,7 +358,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'Staff Layout', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[staff_layout]',
+				'settings' => 'theme_mayflower_options[staff_layout]',
 				'type'     => 'radio',
 				'choices'  => array(
 					'list-view' => __( 'List View', 'bc-douglas-fir' ),
@@ -385,7 +385,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'List Staff Picture', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[staff_picture_toggle]',
+				'settings' => 'theme_mayflower_options[staff_picture_toggle]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -397,7 +397,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'List Staff "More About" Link', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[staff_more_toggle]',
+				'settings' => 'theme_mayflower_options[staff_more_toggle]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -420,7 +420,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'List Staff Phone Number', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[staff_phone_toggle]',
+				'settings' => 'theme_mayflower_options[staff_phone_toggle]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -432,7 +432,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'List Staff Office Location', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[staff_location_toggle]',
+				'settings' => 'theme_mayflower_options[staff_location_toggle]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -444,7 +444,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'List Staff Office Hours', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[staff_hours_toggle]',
+				'settings' => 'theme_mayflower_options[staff_hours_toggle]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -456,7 +456,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'List Staff Biography', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[staff_bio_toggle]',
+				'settings' => 'theme_mayflower_options[staff_bio_toggle]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -479,7 +479,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'Display Date on Posts', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[display_post_date]',
+				'settings' => 'theme_mayflower_options[display_post_date]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -491,7 +491,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'Display Author on Posts', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_general',
-				'settings' => 'theme_bc_douglas_fir_options[display_post_author]',
+				'settings' => 'theme_mayflower_options[display_post_author]',
 				'type'     => 'checkbox',
 			)
 		)
@@ -501,7 +501,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 	 * Home Page Settings
 	 */
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[slider_toggle]',
+		'theme_mayflower_options[slider_toggle]',
 		array(
 			'type'    => 'option',
 			'default' => $bc_douglas_fir_theme_option_defaults['slider_toggle'],
@@ -509,7 +509,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[slider_layout]',
+		'theme_mayflower_options[slider_layout]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['slider_layout'],
@@ -517,7 +517,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[slider_number_slides]',
+		'theme_mayflower_options[slider_number_slides]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['slider_number_slides'],
@@ -525,7 +525,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[slider_title]',
+		'theme_mayflower_options[slider_title]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['slider_title'],
@@ -533,7 +533,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[slider_excerpt]',
+		'theme_mayflower_options[slider_excerpt]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['slider_excerpt'],
@@ -541,7 +541,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[slider_order]',
+		'theme_mayflower_options[slider_order]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['slider_order'],
@@ -549,7 +549,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[blog_homepage_toggle]',
+		'theme_mayflower_options[blog_homepage_toggle]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['blog_homepage_toggle'],
@@ -557,7 +557,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[blog_number_posts]',
+		'theme_mayflower_options[blog_number_posts]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['blog_number_posts'],
@@ -583,7 +583,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'           => __( 'Enable Home Page Slider feature?', 'bc-douglas-fir' ),
 				'section'         => 'bc_douglas_fir_home',
-				'settings'        => 'theme_bc_douglas_fir_options[slider_toggle]',
+				'settings'        => 'theme_mayflower_options[slider_toggle]',
 				'type'            => 'checkbox',
 				'active_callback' => 'is_front_page',
 			)
@@ -596,7 +596,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'           => __( 'Slider Layout', 'bc-douglas-fir' ),
 				'section'         => 'bc_douglas_fir_home',
-				'settings'        => 'theme_bc_douglas_fir_options[slider_layout]',
+				'settings'        => 'theme_mayflower_options[slider_layout]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'radio',
 				'choices'         => array(
@@ -613,7 +613,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'           => __( 'How many slides should we show?', 'bc-douglas-fir' ),
 				'section'         => 'bc_douglas_fir_home',
-				'settings'        => 'theme_bc_douglas_fir_options[slider_number_slides]',
+				'settings'        => 'theme_mayflower_options[slider_number_slides]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'select',
 				'choices'         => array(
@@ -641,7 +641,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'           => __( 'Show slider title?', 'bc-douglas-fir' ),
 				'section'         => 'bc_douglas_fir_home',
-				'settings'        => 'theme_bc_douglas_fir_options[slider_title]',
+				'settings'        => 'theme_mayflower_options[slider_title]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'checkbox',
 			)
@@ -654,7 +654,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'           => __( 'Show slider excerpt?', 'bc-douglas-fir' ),
 				'section'         => 'bc_douglas_fir_home',
-				'settings'        => 'theme_bc_douglas_fir_options[slider_excerpt]',
+				'settings'        => 'theme_mayflower_options[slider_excerpt]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'checkbox',
 			)
@@ -672,7 +672,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'          => __( 'Slide Order', 'bc-douglas-fir' ),
 				'section'        => 'bc_douglas_fir_home',
-				'settings'       => 'theme_bc_douglas_fir_options[slider_order]',
+				'settings'       => 'theme_mayflower_options[slider_order]',
 				'type'           => 'radio',
 				'choices'        => array(
 					'menu_order'       => __( 'Sort Order (as set)', 'bc-douglas-fir' ),
@@ -714,7 +714,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'           => __( 'Enable blog posts on home page?', 'bc-douglas-fir' ),
 				'description'     => __( 'Show recent blog posts below home page content. Only applies if homepage is set to a static page.', 'bc-douglas-fir' ),
 				'section'         => 'bc_douglas_fir_home',
-				'settings'        => 'theme_bc_douglas_fir_options[blog_homepage_toggle]',
+				'settings'        => 'theme_mayflower_options[blog_homepage_toggle]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'checkbox',
 			)
@@ -728,7 +728,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'           => __( 'Number of blog posts', 'bc-douglas-fir' ),
 				'description'     => __( 'How many blog posts should display below page content?', 'bc-douglas-fir' ),
 				'section'         => 'bc_douglas_fir_home',
-				'settings'        => 'theme_bc_douglas_fir_options[blog_number_posts]',
+				'settings'        => 'theme_mayflower_options[blog_number_posts]',
 				'active_callback' => 'is_front_page',
 				'type'            => 'select',
 				'choices'         => array(
@@ -751,7 +751,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 	 * Social Media Settings
 	 */
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[facebook]',
+		'theme_mayflower_options[facebook]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['facebook'],
@@ -759,7 +759,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[twitter]',
+		'theme_mayflower_options[twitter]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['twitter'],
@@ -767,7 +767,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[linkedin]',
+		'theme_mayflower_options[linkedin]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['linkedin'],
@@ -775,7 +775,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[youtube]',
+		'theme_mayflower_options[youtube]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['youtube'],
@@ -783,7 +783,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[instagram]',
+		'theme_mayflower_options[instagram]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['instagram'],
@@ -797,7 +797,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'Facebook', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_social',
-				'settings' => 'theme_bc_douglas_fir_options[facebook]',
+				'settings' => 'theme_mayflower_options[facebook]',
 				'type'     => 'text',
 			)
 		)
@@ -809,7 +809,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'Twitter', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_social',
-				'settings' => 'theme_bc_douglas_fir_options[twitter]',
+				'settings' => 'theme_mayflower_options[twitter]',
 				'type'     => 'text',
 			)
 		)
@@ -821,7 +821,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'LinkedIn', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_social',
-				'settings' => 'theme_bc_douglas_fir_options[linkedin]',
+				'settings' => 'theme_mayflower_options[linkedin]',
 				'type'     => 'text',
 			)
 		)
@@ -833,7 +833,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'YouTube', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_social',
-				'settings' => 'theme_bc_douglas_fir_options[youtube]',
+				'settings' => 'theme_mayflower_options[youtube]',
 				'type'     => 'text',
 			)
 		)
@@ -845,7 +845,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'    => __( 'Instagram', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_social',
-				'settings' => 'theme_bc_douglas_fir_options[instagram]',
+				'settings' => 'theme_mayflower_options[instagram]',
 				'type'     => 'text',
 			)
 		)
@@ -854,7 +854,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 	 * Admin Only Settings
 	 */
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[hide_searchform]',
+		'theme_mayflower_options[hide_searchform]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['hide_searchform'],
@@ -864,7 +864,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[limit_searchform_scope]',
+		'theme_mayflower_options[limit_searchform_scope]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['limit_searchform_scope'],
@@ -874,7 +874,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[custom_search_scope]',
+		'theme_mayflower_options[custom_search_scope]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['custom_search_scope'],
@@ -885,7 +885,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[custom_search_url]',
+		'theme_mayflower_options[custom_search_url]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['custom_search_url'],
@@ -895,7 +895,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[custom_search_api_key]',
+		'theme_mayflower_options[custom_search_api_key]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['custom_search_api_key'],
@@ -906,7 +906,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[globals_path]',
+		'theme_mayflower_options[globals_path]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['globals_path'],
@@ -916,7 +916,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[globals_append_path]',
+		'theme_mayflower_options[globals_append_path]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['globals_append_path'],
@@ -926,7 +926,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[globals_url]',
+		'theme_mayflower_options[globals_url]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['globals_url'],
@@ -936,7 +936,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_setting(
-		'theme_bc_douglas_fir_options[globals_version]',
+		'theme_mayflower_options[globals_version]',
 		array(
 			'type'              => 'option',
 			'default'           => $bc_douglas_fir_theme_option_defaults['globals_version'],
@@ -954,7 +954,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'       => __( 'Hide Search Form', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[hide_searchform]',
+				'settings'    => 'theme_mayflower_options[hide_searchform]',
 				'type'        => 'checkbox',
 			)
 		)
@@ -968,7 +968,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Limit Search Form Scope', 'bc-douglas-fir' ),
 				'description' => __( 'Limit search results to pages within the subsite', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[limit_searchform_scope]',
+				'settings'    => 'theme_mayflower_options[limit_searchform_scope]',
 				'type'        => 'checkbox',
 			)
 		)
@@ -981,7 +981,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Custom Search Scope', 'bc-douglas-fir' ),
 				'description' => __( 'Use a custom search scope instead the current site. Comma separated list of URL or URL parts.', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[custom_search_scope]',
+				'settings'    => 'theme_mayflower_options[custom_search_scope]',
 				'type'        => 'text',
 			)
 		)
@@ -994,7 +994,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Custom Search URL', 'bc-douglas-fir' ),
 				'description' => __( 'Allows definition of a custom URL for search (instead of passing a filter)', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[custom_search_url]',
+				'settings'    => 'theme_mayflower_options[custom_search_url]',
 				'type'        => 'url',
 			)
 		)
@@ -1007,7 +1007,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Custom Search API Key', 'bc-douglas-fir' ),
 				'description' => __( 'Allows definition of a custom public API key for autofill. Required if custom URL is defined. ', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[custom_search_api_key]',
+				'settings'    => 'theme_mayflower_options[custom_search_api_key]',
 				'type'        => 'text',
 			)
 		)
@@ -1022,7 +1022,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Globals Path', 'bc-douglas-fir' ),
 				'description' => __( 'Path to Globals files', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[globals_path]',
+				'settings'    => 'theme_mayflower_options[globals_path]',
 				'type'        => 'sanitize_text_field',
 			)
 		)
@@ -1035,7 +1035,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Append Globals Path to System Path', 'bc-douglas-fir' ),
 				'description' => __( 'Should the Globals Path option be appended to the system path?', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[globals_append_path]',
+				'settings'    => 'theme_mayflower_options[globals_append_path]',
 				'type'        => 'checkbox',
 			)
 		)
@@ -1048,7 +1048,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Globals URL', 'bc-douglas-fir' ),
 				'description' => __( 'Public URL of Globals files (used for CSS and JS)', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[globals_url]',
+				'settings'    => 'theme_mayflower_options[globals_url]',
 				'type'        => 'esc_url',
 			)
 		)
@@ -1061,7 +1061,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Append Globals URL to System URL', 'bc-douglas-fir' ),
 				'description' => __( 'Should the Globals URL option be appended to the system URL?', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[globals_append_url]',
+				'settings'    => 'theme_mayflower_options[globals_append_url]',
 				'type'        => 'checkbox',
 			)
 		)
@@ -1074,7 +1074,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 				'label'       => __( 'Globals Version', 'bc-douglas-fir' ),
 				'description' => __( 'Version of Globals files (used for CSS and JS cache busing)', 'bc-douglas-fir' ),
 				'section'     => 'bc_douglas_fir_admin_options',
-				'settings'    => 'theme_bc_douglas_fir_options[globals_version]',
+				'settings'    => 'theme_mayflower_options[globals_version]',
 				'type'        => 'text',
 			)
 		)
@@ -1104,7 +1104,7 @@ function bc_douglas_fir_get_options() {
 	global $bc_douglas_fir_theme_option_defaults;
 
 	/* Merge theme options and theme options defaults */
-	$bc_douglas_fir_options = wp_parse_args( get_option( 'theme_bc_douglas_fir_options', array() ), $bc_douglas_fir_theme_option_defaults );
+	$bc_douglas_fir_options = wp_parse_args( get_option( 'theme_mayflower_options', array() ), $bc_douglas_fir_theme_option_defaults );
 
 	/* return all values */
 	return $bc_douglas_fir_options;
