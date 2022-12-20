@@ -2,20 +2,20 @@
 /**
  * Theme Header
  *
- * Site header used across Mayflower, including both Lite and Branded.
+ * Site header used across the BC Theme
  *
  * @package Mayflower
  */
 
 /* Globally declare variables used in a variety of locations */
-global $post, $bc_douglas_fir_options, $mayflower_brand_css, $mayflower_theme_version, $globals;
+global $post, $bc_douglas_fir_options, $bc_douglas_fir_brand_css, $bc_douglas_fir_theme_version, $globals;
 
 
 if ( ! ( is_array( $bc_douglas_fir_options ) ) ) {
 	$bc_douglas_fir_options = bc_douglas_fir_get_options();
 }
 
-$mayflower_theme_version = wp_get_theme();
+$bc_douglas_fir_theme_version = wp_get_theme();
 $post_meta_data          = get_post_custom( $post->ID ?? null );
 ?>
 <!DOCTYPE html>
@@ -98,5 +98,5 @@ $post_meta_data          = get_post_custom( $post->ID ?? null );
 
 	mayflower_sitewide_notice();
 	?>
-	<div id="main" class="<?php echo esc_attr( $mayflower_brand_css ); ?> container shadow">
+	<div id="main" class="<?php echo esc_attr( $bc_douglas_fir_brand_css ); ?> container shadow">
 		<div class="row pt-md-4"><!--endnoindex-->

@@ -230,7 +230,7 @@ function mayflower_blacklist_blocks() {
 		'mayflower-blacklist-blocks',
 		get_theme_file_uri( 'js/blocks-blacklist.js', __FILE__ ),
 		array( 'wp-blocks' ),
-		BC_DOUGLAS_FIR_STYLE_VERSION
+		wp_get_theme()->get( 'Version' )
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'mayflower_blacklist_blocks' );
@@ -252,7 +252,7 @@ function mayflower_add_editor_styles() {
 	add_editor_style(
 		array(
 			$globals->url . 'c/g.css?=' . $globals->version,
-			'style.css?=' . BC_DOUGLAS_FIR_STYLE_VERSION,
+			'style.css?=' . wp_get_theme()->get( 'Version' ),
 			'css/custom-editor-style.css',
 		)
 	);
@@ -567,12 +567,12 @@ function mayflower_scripts() {
 	$globals = new Globals();
 	wp_enqueue_style( 'globals', $globals->url . 'c/g.css', null, $globals->version, 'screen' );
 	wp_enqueue_style( 'globals-print', $globals->url . 'c/p.css', null, $globals->version, 'print' );
-	wp_enqueue_style( 'bc-douglas-fir', get_stylesheet_uri(), null, BC_DOUGLAS_FIR_STYLE_VERSION );
+	wp_enqueue_style( 'bc-douglas-fir', get_stylesheet_uri(), null, wp_get_theme()->get( 'Version' ) );
 
 	wp_enqueue_script( 'jquery' );
 	// wp_enqueue_script( 'globals-head', $globals->url . 'j/ghead-full.min.js', array( 'jquery' ), $globals->version, false );
 	wp_enqueue_script( 'globals', $globals->url . 'j/gfoot-full.min.js', array( 'jquery' ), $globals->version, true );
-	wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js#deferload', array( 'jquery' ), BC_DOUGLAS_FIR_STYLE_VERSION, true );
+	wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js#deferload', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 
 	wp_enqueue_script( 'youvisit', 'https://www.youvisit.com/tour/Embed/js2#asyncdeferload', null, 'auto', true );
 
@@ -592,7 +592,7 @@ function mayflower_scripts() {
 		$search_query_peram     = 'txtQuery';
 		$filter_peram           = 'site[]'; // hardcoded default.
 
-		wp_enqueue_script( 'search', get_template_directory_uri() . '/js/search.js#deferload', array( 'jquery', 'globals' ), BC_DOUGLAS_FIR_STYLE_VERSION, true );
+		wp_enqueue_script( 'search', get_template_directory_uri() . '/js/search.js#deferload', array( 'jquery', 'globals' ), wp_get_theme()->get( 'Version' ), true );
 		wp_add_inline_script(
 			'search',
 			'var limit_searchform_scope =' . esc_attr( $limit_searchform_scope ) .
@@ -614,7 +614,7 @@ function mayflower_scripts() {
 	if ( is_page_template( 'page-nav-page-fluid-grid.php' ) ) {
 		wp_enqueue_script( 'imagesloaded' );
 		wp_enqueue_script( 'masonry' );
-		wp_enqueue_script( 'page-nav-page-fluid-grid', get_template_directory_uri() . '/js/page-nav-page-fluid-grid.js', array( 'imagesloaded', 'masonry' ), BC_DOUGLAS_FIR_STYLE_VERSION, true );
+		wp_enqueue_script( 'page-nav-page-fluid-grid', get_template_directory_uri() . '/js/page-nav-page-fluid-grid.js', array( 'imagesloaded', 'masonry' ), wp_get_theme()->get( 'Version' ), true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mayflower_scripts' );

@@ -12,11 +12,6 @@
  */
 defined( 'ABSPATH' ) || die( 'Sorry, no direct access allowed' );
 
-/**
- * Define constant used to bust style caches
- */
-define( 'BC_DOUGLAS_FIR_STYLE_VERSION', '0.0.0' );
-
 /*
  * Load theme options framework
  *
@@ -316,9 +311,9 @@ function bc_douglas_fir_trimmed_url() {
  * Used in page templates.
  * TODO: move to function
  */
-$mayflower_brand_css = '';
+$bc_douglas_fir_brand_css = '';
 
-$mayflower_brand_css = 'globals-lite';
+$bc_douglas_fir_brand_css = 'globals-lite';
 
 
 
