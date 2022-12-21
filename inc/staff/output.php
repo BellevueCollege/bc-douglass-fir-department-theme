@@ -16,7 +16,7 @@ $loop = new WP_Query(
 );
 
 
-
+$bc_douglas_fir_options = bc_douglas_fir_get_options();
 if ( 'list-view' === $bc_douglas_fir_options['staff_layout'] && $bc_douglas_fir_options['staff_toggle'] ) {
 	?>
 	<div class="staff-details">

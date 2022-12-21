@@ -1123,3 +1123,17 @@ function bc_douglas_fir_get_option( $option ) {
 	$option                 = $bc_douglas_fir_options[ $option ];
 	return $option;
 }
+
+/**
+ * Legacy version of bc_douglas_fir_get_options()
+ */
+function mayflower_get_options() {
+	return bc_douglas_fir_get_options();
+}
+
+/**
+ * Legacy version of bc_douglas_fir_get_option()
+ */
+function mayflower_get_option( $option ) {
+	return bc_douglas_fir_get_option( $option );
+}

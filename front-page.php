@@ -10,6 +10,7 @@
 get_header(); ?>
 
 <?php
+$bc_douglas_fir_options = bc_douglas_fir_get_options();
 /**
  * Load Featured Slideshow Full Width
  *
