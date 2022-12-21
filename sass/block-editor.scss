@@ -1,3 +1,4 @@
+@use "sass:meta";
 /* Custom Editor Styles
  * Loaded in the TinyMCE Visual Editor
  */
@@ -12,11 +13,11 @@ $brand-danger:          #C4122F; // BC Brand Red
 
 .wp-block {
 
-	@import "./node_modules/globals/src/4/sass/partials/base";
-	@import "./node_modules/globals/src/4/sass/partials/bootstrap-overrides";
-	@import "./node_modules/globals/src/4/sass/partials/typography";
-	@import "./node_modules/globals/src/4/sass/partials/structure";
-	@import "./node_modules/globals/src/4/sass/partials/pagination";
+	@include meta.load-css("../node_modules/globals/src/4/sass/partials/_base.scss");
+	@include meta.load-css("../node_modules/globals/src/4/sass/partials/bootstrap-overrides");
+	@include meta.load-css("../node_modules/globals/src/4/sass/partials/typography");
+	@include meta.load-css("../node_modules/globals/src/4/sass/partials/structure");
+	@include meta.load-css("../node_modules/globals/src/4/sass/partials/pagination");
 
 	/* Override Bootstrap in Nested Blocks */
 	.components-icon-button {
