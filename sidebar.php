@@ -4,7 +4,7 @@
  *
  * Render content for widgetized sidebars (left or right)
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 ?>

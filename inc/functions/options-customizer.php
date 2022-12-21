@@ -4,7 +4,7 @@
  *
  * This file builds out all settings within the Theme Customizer
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 // Make pluggable.
@@ -1116,7 +1116,7 @@ function bc_douglas_fir_get_options() {
  * Pass option key to get option value.
  *
  * @param string $option Option name.
- * @return string Option value from Mayflower Options.
+ * @return string Option value from BC Douglas Fir Theme Options.
  */
 function bc_douglas_fir_get_option( $option ) {
 	$bc_douglas_fir_options = bc_douglas_fir_get_options();

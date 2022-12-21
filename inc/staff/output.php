@@ -1,8 +1,8 @@
 <?php
 /**
- * Mayflower Staff Output
+ * BC Douglas Fir Theme Staff Output
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 // Start showing staff list.

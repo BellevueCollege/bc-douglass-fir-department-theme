@@ -4,7 +4,7 @@
  *
  * This displays all archives (tags, categories, etc.)
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header(); ?>

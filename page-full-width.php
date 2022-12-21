@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Width (No Sidebar)
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header();

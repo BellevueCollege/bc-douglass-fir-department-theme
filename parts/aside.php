@@ -2,7 +2,7 @@
 /**
  * Post and Page Aside Template (Deprecated)
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 $ppa_title   = post_and_page_asides_return_title();

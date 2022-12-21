@@ -4,7 +4,7 @@
  *
  * Site header used across the BC Theme
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 /* Globally declare variables used in a variety of locations */
@@ -91,7 +91,7 @@ $post_meta_data          = get_post_custom( $post->ID ?? null );
 
 
 	/**
-	 * Mayflower lite header
+	 * BC Douglas Fir Theme lite header
 	 */
 	get_template_part( 'parts/light-header' );
 

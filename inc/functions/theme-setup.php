@@ -1,17 +1,17 @@
 <?php
 /**
- * Mayflower Theme Setup
+ * BC Douglas Fir Theme Theme Setup
  *
- * This file defines the setup functions for the Mayflower Theme.
+ * This file defines the setup functions for the BC Douglas Fir Theme.
  *
  * For more information on hooks, actions, and filters,
  * see {@link http://codex.wordpress.org/Plugin_API Plugin API}.
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  * @copyright Copyright (c) 2015 Bellevue College
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License, v2 (or newer)
  *
- * @since Mayflower 1.0
+ * @since BC Douglas Fir Theme 1.0
  */
 
 /**
@@ -136,7 +136,7 @@ function mayflower_setup() {
 	 * 'thumbnail'.
 	 *
 	 * The 'lite_header_logo' is used as the logo size for
-	 * Mayflower Lite.
+	 * BC Douglas Fir Theme Lite.
 	 *
 	 * Child Themes can override this setting
 	 * via add_image_size().
@@ -165,7 +165,7 @@ function mayflower_setup() {
 	 * 'thumbnail'.
 	 *
 	 * The 'staff-thumbnail' is used for staff page listings.
-	 * This would need to be migrated out of Mayflower if
+	 * This would need to be migrated out of BC Douglas Fir Theme if
 	 * the Embedded Staff Plugin was extracted.
 	 *
 	 * Child Themes can override this setting
@@ -226,10 +226,10 @@ function mayflower_setup() {
 	add_theme_support( 'html5', array( 'gallery', 'caption' ) );
 
 	/*
-	 * Register Navigation Menu (Mayflower Lite)
+	 * Register Navigation Menu (BC Douglas Fir Theme Lite)
 	 *
 	 * Registers one navigation menu for Top Nav
-	 * in Mayflower Lite
+	 * in BC Douglas Fir Theme Lite
 	 *
 	 * @since WordPress 3.0
 	 */
@@ -298,7 +298,7 @@ function mayflower_setup() {
 	 */
 
 	/**
-	 * Block Editor Add Mayflower Color Pallette
+	 * Block Editor Add BC Douglas Fir Theme Color Pallette
 	 */
 	add_theme_support(
 		'editor-color-palette',
@@ -357,7 +357,7 @@ function mayflower_setup() {
 	add_theme_support( 'disable-custom-colors' );
 
 	/**
-	 * Block Editor Add Mayflower Font Sizes
+	 * Block Editor Add BC Douglas Fir Theme Font Sizes
 	 */
 	add_theme_support(
 		'editor-font-sizes',

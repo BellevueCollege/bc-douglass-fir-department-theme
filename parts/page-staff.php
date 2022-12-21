@@ -2,7 +2,7 @@
 /**
  * Staff Page Template Part
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 ?>
@@ -30,7 +30,7 @@ if ( have_posts() ) :
 	<?php endif; ?>
 
 <?php
-// Ensure Mayflower Options are available to loaded file.
+// Ensure BC Douglas Fir Theme Options are available to loaded file.
 $bc_douglas_fir_options = bc_douglas_fir_get_options();
 ?>
 <?php require get_template_directory() . '/inc/mayflower-staff/output.php'; ?>

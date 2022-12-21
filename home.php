@@ -4,7 +4,7 @@
  *
  * This displays posts on the 'Blog Home' page
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header();

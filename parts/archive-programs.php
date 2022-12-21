@@ -2,7 +2,7 @@
 /**
  * Student Programs Archive Post
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 // Posts sorted alphabetically.

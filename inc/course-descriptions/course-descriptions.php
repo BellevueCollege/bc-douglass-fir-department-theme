@@ -2,7 +2,7 @@
 /**
  * Course Description Shortcode Buttons and Modals
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 /**************************************

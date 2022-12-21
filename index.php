@@ -6,9 +6,9 @@
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
  * e.g., it puts together the home page when no home.php file exists.
- * This isn't used for most templates in Mayflower.
+ * This isn't used for most templates in BC Douglas Fir Theme.
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header();

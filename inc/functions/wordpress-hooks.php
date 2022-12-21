@@ -1,13 +1,13 @@
 <?php
 /**
- * Mayflower Theme WordPress Core Hooks
+ * BC Douglas Fir Theme Theme WordPress Core Hooks
  *
  * Contains all of the Theme's functions that
  * hook into core action/filter hooks, other
  * than Theme Setup functions, Plugin functions,
  * and Settings API functions
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 /**
@@ -188,7 +188,7 @@ add_filter( 'the_excerpt', 'mayflower_the_excerpt_override' );
 
 
 /**
- * Disable default widgets we don't want to use in Mayflower
+ * Disable default widgets we don't want to use in BC Douglas Fir Theme
  */
 function mayflower_remove_default_widgets() {
 
@@ -396,7 +396,7 @@ function mayflower_register_sidebar() {
 add_action( 'widgets_init', 'mayflower_register_sidebar' );
 
 /**
- * Register Mayflower Sidebars
+ * Register BC Douglas Fir Theme Sidebars
  *
  * Use hook to register mayflower sidebars
  */
@@ -561,7 +561,7 @@ function mayflower_defer_async_scripts( $url ) {
 add_filter( 'clean_url', 'mayflower_defer_async_scripts', 11, 1 );
 
 /**
- * Enqueue Mayflower scripts and styles
+ * Enqueue BC Douglas Fir Theme scripts and styles
  */
 function mayflower_scripts() {
 	$globals = new Globals();

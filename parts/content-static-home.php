@@ -1,8 +1,8 @@
 <?php
 /**
- * Content Template for Mayflower Static Homepage
+ * Content Template for BC Douglas Fir Theme Static Homepage
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 $bc_douglas_fir_options = bc_douglas_fir_get_options();

@@ -2,7 +2,7 @@
 /**
  * Blog Home (Archive) Part
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 // Loop for posts.

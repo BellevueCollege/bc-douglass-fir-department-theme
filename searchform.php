@@ -1,10 +1,10 @@
 <?php
 /**
- * Mayflower Lite Search Form
+ * BC Douglas Fir Theme Lite Search Form
  *
- * Complete search form used in the Mayflower lite header
+ * Complete search form used in the BC Douglas Fir Theme lite header
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 global $bc_douglas_fir_options;

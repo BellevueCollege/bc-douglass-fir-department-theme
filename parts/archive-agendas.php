@@ -2,7 +2,7 @@
 /**
  * Board of Trustees Agenda Archive Part
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 foreach ( posts_by_year() as $yr => $posts_in_yr ) : ?>

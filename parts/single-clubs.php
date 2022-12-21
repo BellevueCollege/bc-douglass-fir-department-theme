@@ -3,7 +3,7 @@
  * Template for displaying post type for the student-club plugin.
  *
  * @link https://github.com/BellevueCollege/student-club
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 if ( have_posts() ) :

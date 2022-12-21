@@ -1,8 +1,8 @@
 <?php
 /**
- * Mayflower Featured Slider Plugin
+ * BC Douglas Fir Theme Featured Slider Plugin
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 /**

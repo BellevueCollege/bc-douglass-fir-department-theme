@@ -2,7 +2,7 @@
 /**
  * Template Name: Navigation Page (Grid)
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header();

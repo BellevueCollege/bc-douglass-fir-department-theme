@@ -2,7 +2,7 @@
 /**
  * Single Staff Page
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 if ( have_posts() ) :

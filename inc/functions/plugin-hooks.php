@@ -2,14 +2,14 @@
 /**
  * All Plugin Hooks
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 defined( 'ABSPATH' ) || die( 'Sorry, no direct access allowed' );
 
 /*
  * Plugin Hooks are hooks and filters specific to plugins used by BC
- * This allows for customization of these plugins within Mayflower
+ * This allows for customization of these plugins within BC Douglas Fir Theme
  */
 
 /*

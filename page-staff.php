@@ -2,7 +2,7 @@
 /**
  * Template Name: Staff Page
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header();

@@ -2,9 +2,9 @@
 /**
  * Set Up Globals Calls
  *
- * These files provide plugin-like functionality embedded within Mayflower.
+ * These files provide plugin-like functionality embedded within BC Douglas Fir Theme.
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 /**

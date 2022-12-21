@@ -2,7 +2,7 @@
 /**
  * Post Archive Part
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 ?>

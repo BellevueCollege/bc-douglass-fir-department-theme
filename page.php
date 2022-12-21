@@ -4,7 +4,7 @@
  *
  * Output page content.
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header();

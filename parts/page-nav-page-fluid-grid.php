@@ -2,7 +2,7 @@
 /**
  * Nav Page Fluid Grid Template Part
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 ?>

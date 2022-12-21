@@ -1,5 +1,5 @@
 /**
- * Gutenberg blocks that are disabled by Mayflower
+ * Gutenberg blocks that are disabled by BC Douglas Fir Theme
  */
 window.onload = function () {
 	wp.blocks.unregisterBlockType('core/table');

@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || die( 'Sorry, no direct access allowed' );
  * theme-setup.php - sets theme functionality
  * wordpress-hooks.php - filters and functionality changes
  * plugin-hooks.php - filters and functionality changes for first- and third-party plugins
- * options-admin.php - defines Mayflower Admin Only option page -
+ * options-admin.php - defines BC Douglas Fir Theme Admin Only option page -
  *					   consider migrating to customizer
  * options.php - theme options definition
  * options-customizer.php - translate options.php to customizer
@@ -52,12 +52,12 @@ $bc_douglas_fir_options = bc_douglas_fir_get_options();
 require get_template_directory() . '/inc/functions/globals.php';
 
 /**
- * WordPress Hooks used to configure WordPress for Mayflower
+ * WordPress Hooks used to configure WordPress for BC Douglas Fir Theme
  */
 require get_template_directory() . '/inc/functions/wordpress-hooks.php';
 
 /**
- * Plugin Hooks used to configure various Plugins for Mayflower
+ * Plugin Hooks used to configure various Plugins for BC Douglas Fir Theme
  */
 require get_template_directory() . '/inc/functions/plugin-hooks.php';
 
@@ -119,7 +119,7 @@ if ( ! function_exists( 'bc_douglas_fir_pagination' ) ) {
 	/**
 	 * Custom Pagination
 	 *
-	 * Output pagination using Globals/Mayflower styles.
+	 * Output pagination using Globals/BC Douglas Fir Theme styles.
 	 * Function is pluggable and can be over-ridden from child themes.
 	 */
 	function bc_douglas_fir_pagination() {
@@ -279,7 +279,7 @@ function is_multisite_home() {
 }
 
 /**
- * Mayflower Trimmed URL function
+ * BC Douglas Fir Theme Trimmed URL function
  *
  * Return trimmed URL (for example, www.bellevuecollege.edu/sample ).
  * Used for Swiftype.
@@ -294,7 +294,7 @@ function bc_douglas_fir_trimmed_url() {
 	$output   = $parsed['host'] . $parsed['path'];
 
 	/**
-	 * Filter Mayflower Trimmed URL
+	 * Filter BC Douglas Fir Theme Trimmed URL
 	 *
 	 * @param string $output Trimmed URL.
 	 */
@@ -306,7 +306,7 @@ function bc_douglas_fir_trimmed_url() {
 
 
 /**
- * Set $mayflower_brand variable
+ * Set $bc_douglas_fir_brand variable
  *
  * Used in page templates.
  * TODO: move to function
@@ -318,11 +318,11 @@ $bc_douglas_fir_brand_css = 'globals-lite';
 
 
 /**
- * Mayflower CPT Update Post Order action hook
+ * BC Douglas Fir Theme CPT Update Post Order action hook
  *
  * Save post order on custom post order page used by Staff and Slider
  */
-function mayflower_cpt_update_post_order() {
+function bc_douglas_fir_cpt_update_post_order() {
 
 	$post_type = isset( $_POST['postType'] ) ? wp_unslash( $_POST['postType'] ) : null;
 	$order     = isset( $_POST['order'] ) ? wp_unslash( $_POST['order'] ) : null;
@@ -344,7 +344,7 @@ function mayflower_cpt_update_post_order() {
 	}
 	die( '1' );
 }
-add_action( 'wp_ajax_mayflower_cpt_update_post_order', 'mayflower_cpt_update_post_order' );
+add_action( 'wp_ajax_bc_douglas_fir_cpt_update_post_order', 'bc_douglas_fir_cpt_update_post_order' );
 
 /**
  * Sitewide Notice

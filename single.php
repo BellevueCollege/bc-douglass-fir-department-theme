@@ -4,7 +4,7 @@
  *
  * This displays all single posts.
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header(); ?>

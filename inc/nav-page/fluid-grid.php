@@ -4,7 +4,7 @@
  *
  * Used by both Page Template and Block
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 ?>

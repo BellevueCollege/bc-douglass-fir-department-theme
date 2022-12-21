@@ -1,8 +1,8 @@
 <?php
 /**
- * Mayflower Staff Custom Post Type
+ * BC Douglas Fir Theme Staff Custom Post Type
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 /**

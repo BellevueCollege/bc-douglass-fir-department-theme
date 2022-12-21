@@ -4,7 +4,7 @@
  *
  * Displays File Attachments
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header(); ?>

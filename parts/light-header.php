@@ -2,7 +2,7 @@
 /**
  * Lite Header Part
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 $globals = new Globals();

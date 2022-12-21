@@ -47,5 +47,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: './'
-    ArtifactName: 'mayflower-g4'
+    ArtifactName: 'bc-douglas-fir'
     publishLocation: 'Container'

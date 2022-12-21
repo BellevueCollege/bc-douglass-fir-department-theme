@@ -2,7 +2,7 @@
 /**
  * Top Navigation Part
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 /** Loading WordPress Custom Menu with Fallback to wp_list_pages **/

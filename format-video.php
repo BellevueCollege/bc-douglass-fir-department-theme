@@ -4,10 +4,10 @@
  *
  * Output content into excerpt with minimal excerpting.
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
-// Load Mayflower options into array.
+// Load BC Douglas Fir Theme options into array.
 $bc_douglas_fir_options = bc_douglas_fir_get_options();
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'clearfix' ); ?>>

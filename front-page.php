@@ -2,9 +2,9 @@
 /**
  * Front Page Template File
  *
- * Loads Blog and Static Homepages in Mayflower
+ * Loads Blog and Static Homepages in BC Douglas Fir Theme
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 get_header(); ?>

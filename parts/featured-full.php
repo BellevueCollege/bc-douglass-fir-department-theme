@@ -2,7 +2,7 @@
 /**
  * Featured Full Carousel Template
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 if ( is_front_page() ) :

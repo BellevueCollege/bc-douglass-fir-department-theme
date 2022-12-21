@@ -4,10 +4,10 @@
  *
  * Output the featured image large at the top of the post
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
-// Load Mayflower options into array.
+// Load BC Douglas Fir Theme options into array.
 $bc_douglas_fir_options = bc_douglas_fir_get_options();
 
 ?>

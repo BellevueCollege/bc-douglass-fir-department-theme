@@ -3,7 +3,7 @@
  * Board of Trustees Agenda Single View
  *
  * @link https://github.com/BellevueCollege/trustees-agenda
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 if ( have_posts() ) :

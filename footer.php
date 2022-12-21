@@ -2,7 +2,7 @@
 /**
  * Footer Content
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 $globals = new Globals();
@@ -19,8 +19,8 @@ wp_footer();
 
 <!--
 	<?php
-	$mayflower_version = wp_get_theme();
-	echo esc_attr( $mayflower_version->get( 'Name' ) . ' version ' . $mayflower_version->get( 'Version' ) );
+	$bc_douglas_fir_version = wp_get_theme();
+	echo esc_attr( $bc_douglas_fir_version->get( 'Name' ) . ' version ' . $bc_douglas_fir_version->get( 'Version' ) );
 	?>
 
 -->

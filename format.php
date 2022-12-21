@@ -2,7 +2,7 @@
 /**
  * Default Post Format
  *
- * @package Mayflower
+ * @package BC Douglas Fir Theme
  */
 
 $bc_douglas_fir_options = bc_douglas_fir_get_options();
