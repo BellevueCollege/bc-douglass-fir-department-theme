@@ -291,7 +291,7 @@ function is_multisite_home() {
 function bc_douglas_fir_trimmed_url() {
 	$site_url = get_site_url( null, '', 'https' );
 	$parsed   = wp_parse_url( $site_url );
-	$output   = $parsed['host'] . $parsed['path'];
+	$output   = $parsed['host'] . $parsed['path'] ?? '';
 
 	/**
 	 * Filter BC Douglas Fir Theme Trimmed URL
