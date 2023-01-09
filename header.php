@@ -22,17 +22,17 @@ $post_meta_data          = get_post_custom( $post->ID ?? null );
 <html <?php language_attributes(); ?>>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<?php if ( array_key_exists( '_seo_custom_page_title', $post_meta_data ) && isset( $post_meta_data['_seo_custom_page_title'][0] ) ) { ?>
+	<?php if ( isset( $post_meta_data['_seo_custom_page_title'][0] ) ) { ?>
 		<meta property="og:title" content="<?php echo esc_attr( $post_meta_data['_seo_custom_page_title'][0] ); ?>" />
 	<?php } else { ?>
 		<meta property="og:title" content="<?php echo esc_attr( get_the_title() . ' :: ' . get_bloginfo( 'name', 'display' ) . ' @ Bellevue College' ); ?>" />
 	<?php } ?>
 
-	<?php if ( array_key_exists( '_seo_meta_description', $post_meta_data ) && isset( $post_meta_data['_seo_meta_description'][0] ) ) { ?>
+	<?php if ( isset( $post_meta_data['_seo_meta_description'][0] ) ) { ?>
 		<meta name="description" content="<?php echo esc_html( $post_meta_data['_seo_meta_description'][0] ); ?>" />
 		<meta property="og:description" content="<?php echo esc_html( $post_meta_data['_seo_meta_description'][0] ); ?>" />
 	<?php } ?>
-	<?php if ( array_key_exists( '_seo_meta_keywords', $post_meta_data ) && isset( $post_meta_data['_seo_meta_keywords'][0] ) ) { ?>
+	<?php if ( isset( $post_meta_data['_seo_meta_keywords'][0] ) ) { ?>
 		<meta name="keywords" content="<?php echo esc_html( $post_meta_data['_seo_meta_keywords'][0] ); ?>" />
 	<?php } ?>
 
