@@ -136,6 +136,9 @@ video {
 	}
 }
 
+/**
+ * Style Buttons assoc with WP File Block
+ */
 .wp-element-button {
 	display: inline-block;
 	font-weight: 400;
@@ -168,6 +171,13 @@ video {
 		border-color: #003D79;
 		text-decoration: none;
 	}
+}
+
+/**
+ * Style Audio Block to Add Margin
+ */
+figure.wp-block-audio {
+	margin: 1em;
 }
 
 
