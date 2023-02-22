@@ -33,4 +33,4 @@ if ( have_posts() ) :
 // Ensure BC Douglas Fir Theme Options are available to loaded file.
 $bc_douglas_fir_options = bc_douglas_fir_get_options();
 ?>
-<?php require get_template_directory() . '/inc/mayflower-staff/output.php'; ?>
+<?php require get_template_directory() . '/inc/staff/output.php'; ?>
