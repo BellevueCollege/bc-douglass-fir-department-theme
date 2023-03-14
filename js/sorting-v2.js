@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 			var theOrder = $(this).sortable('toArray');
 
 			var data = {
-				action: 'mayflower_cpt_update_post_order',
+				action: 'bc_douglas_fir_cpt_update_post_order',
 				postType: $(this).attr('data-post-type'),
 				order: theOrder
 			};

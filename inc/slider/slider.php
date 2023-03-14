@@ -170,11 +170,11 @@ function slider_order_page() {
 /**
  * Enqueue Reordering Scripts
  */
-function mayflower_slider_enqueue_scripts() {
+function bc_douglas_fir_slider_enqueue_scripts() {
 	wp_enqueue_script( 'jquery-ui-sortable' );
-	wp_enqueue_script( 'mayflower-admin-scripts', get_template_directory_uri() . '/js/sorting-v2.js', null, '1', false );
+	wp_enqueue_script( 'bc-douglas-fir-admin-scripts', get_template_directory_uri() . '/js/sorting-v2.js', null, '1', false );
 }
-add_action( 'admin_enqueue_scripts', 'mayflower_slider_enqueue_scripts' );
+add_action( 'admin_enqueue_scripts', 'bc_douglas_fir_slider_enqueue_scripts' );
 
 
 if ( is_admin() ) :
