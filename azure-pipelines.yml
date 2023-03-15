@@ -7,6 +7,12 @@ variables:
 pool:
   vmImage: "ubuntu-latest"
 steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+      npm config set "//npm.fontawesome.com/:_authToken" $(FONTAWESOME_KEY)
 - task: Npm@1
   inputs:
     command: 'install'
