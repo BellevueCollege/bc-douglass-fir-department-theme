@@ -582,7 +582,7 @@ function mayflower_scripts() {
 	if ( bc_douglas_fir_get_option( 'limit_searchform_scope' ) ) {
 		$bc_douglas_fir_options      = bc_douglas_fir_get_options();
 		$limit_searchform_scope = $bc_douglas_fir_options['limit_searchform_scope'];
-		$search_url_default     = 'https://www.bellevuecollege.edu/search/';
+		$search_url_default     = 'https://www.bellevuecollege.edu/search-results/';
 		$search_url             = ( $limit_searchform_scope && ( '' !== $bc_douglas_fir_options['custom_search_url'] ) ) ?
 										$bc_douglas_fir_options['custom_search_url'] : $search_url_default;
 		$search_field_id        = $limit_searchform_scope ? 'college-search-field-custom' : 'college-search-field';
