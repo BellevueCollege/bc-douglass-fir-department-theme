@@ -807,7 +807,7 @@ function bc_douglas_fir_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'twitter',
 			array(
-				'label'    => __( 'Twitter', 'bc-douglas-fir' ),
+				'label'    => __( 'X (Previously Twitter)', 'bc-douglas-fir' ),
 				'section'  => 'bc_douglas_fir_social',
 				'settings' => 'theme_mayflower_options[twitter]',
 				'type'     => 'text',

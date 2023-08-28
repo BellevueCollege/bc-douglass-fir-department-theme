@@ -74,7 +74,7 @@ global $post, $bc_douglas_fir_options, $bc_douglas_fir_brand_css, $mayflower_the
 				<?php } ?>
 
 				<?php if ( ! empty( $bc_douglas_fir_options['twitter'] ) ) { ?>
-					<a class="px-2 py-1" href="<?php echo esc_url( $bc_douglas_fir_options['twitter'] ); ?>" title="Twitter">
+					<a class="px-2 py-1" href="<?php echo esc_url( $bc_douglas_fir_options['twitter'] ); ?>" title="X">
 						<i class="fab fa-square-x-twitter" aria-hidden="true"></i>
 						<span class="sr-only">Twitter</span>
 					</a>
